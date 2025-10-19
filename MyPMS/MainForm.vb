@@ -1,6 +1,7 @@
 ﻿Public Class MainForm
 
-    Wow ulam
+    'Wow ulam (edited by zantua)
+    'Hello World
 
 
 End Class
