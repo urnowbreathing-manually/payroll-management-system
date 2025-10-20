@@ -8,7 +8,7 @@ Public Class MainForm
                              (MainPanel.Height - HR_Login.Height) \ 2)
         MainPanel.Controls.Add(HR_Login)
     End Sub
-    'hhghjhh
+    'hh
 
     'Private Sub Show(sender As Object, e As EventArgs)
     '    MainPanel.Dock = DockStyle.None
