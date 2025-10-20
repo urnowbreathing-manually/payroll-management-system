@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MyPMS_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_2_tansparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_2_tansparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_6_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_6_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MyPMS_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MyPMS_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MYyPMS_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MYyPMS_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

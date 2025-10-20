@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HR_Dashboard.Designer.vb">
+      <DependentUpon>HR_Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Dashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HR_Login.Designer.vb">
+      <DependentUpon>HR_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HR_Login.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="HR_Dashboard.resx">
+      <DependentUpon>HR_Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR_Login.resx">
+      <DependentUpon>HR_Login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +136,36 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_2_tansparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_6_transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyPMS_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MYyPMS_4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
