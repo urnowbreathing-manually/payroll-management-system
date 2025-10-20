@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneratePayroll.Designer.vb">
+      <DependentUpon>GeneratePayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratePayroll.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="HR_Dashboard.Designer.vb">
       <DependentUpon>HR_Dashboard.vb</DependentUpon>
     </Compile>
@@ -107,8 +113,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Sidebar.Designer.vb">
+      <DependentUpon>Sidebar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sidebar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GeneratePayroll.resx">
+      <DependentUpon>GeneratePayroll.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HR_Dashboard.resx">
       <DependentUpon>HR_Dashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +138,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sidebar.resx">
+      <DependentUpon>Sidebar.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
