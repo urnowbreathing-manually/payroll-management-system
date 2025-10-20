@@ -1,4 +1,5 @@
-﻿Public Class MainForm
+﻿
+Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         MainPanel.Dock = DockStyle.None
@@ -7,7 +8,7 @@
                              (MainPanel.Height - HR_Login.Height) \ 2)
         MainPanel.Controls.Add(HR_Login)
     End Sub
-
+    'hhghjhh
 
     'Private Sub Show(sender As Object, e As EventArgs)
     '    MainPanel.Dock = DockStyle.None
