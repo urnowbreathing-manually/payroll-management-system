@@ -82,11 +82,11 @@ Partial Class GeneratePayroll
         '
         'EmployeeNameTxtBox
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(117, 60)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox2.TabIndex = 3
+        Me.EmployeeNameTxtBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmployeeNameTxtBox.Location = New System.Drawing.Point(117, 60)
+        Me.EmployeeNameTxtBox.Name = "EmployeeNameTxtBox"
+        Me.EmployeeNameTxtBox.Size = New System.Drawing.Size(185, 29)
+        Me.EmployeeNameTxtBox.TabIndex = 3
         '
         'Label3
         '
@@ -113,7 +113,7 @@ Partial Class GeneratePayroll
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(20, 292)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(788, 248)
+        Me.DataGridView1.Size = New System.Drawing.Size(799, 248)
         Me.DataGridView1.TabIndex = 7
         '
         'Label4
@@ -170,7 +170,7 @@ Partial Class GeneratePayroll
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.Location = New System.Drawing.Point(700, 215)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(108, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(119, 29)
         Me.TextBox6.TabIndex = 12
         '
         'Label7
@@ -235,12 +235,12 @@ Partial Class GeneratePayroll
         '
         'ContactNoTxtBox
         '
-        Me.TextBox10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(133, 142)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox10.TabIndex = 21
+        Me.ContactNoTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ContactNoTxtBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ContactNoTxtBox.Location = New System.Drawing.Point(135, 142)
+        Me.ContactNoTxtBox.Name = "ContactNoTxtBox"
+        Me.ContactNoTxtBox.Size = New System.Drawing.Size(185, 29)
+        Me.ContactNoTxtBox.TabIndex = 21
         '
         'Label10
         '
@@ -277,7 +277,7 @@ Partial Class GeneratePayroll
         Me.TextBox11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox11.Location = New System.Drawing.Point(671, 55)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(137, 29)
+        Me.TextBox11.Size = New System.Drawing.Size(148, 29)
         Me.TextBox11.TabIndex = 25
         '
         'GeneratePayroll
@@ -309,8 +309,9 @@ Partial Class GeneratePayroll
         Me.Controls.Add(Me.EmployeeNameTxtBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
+        Me.Margin = New System.Windows.Forms.Padding(0)
         Me.Name = "GeneratePayroll"
-        Me.Size = New System.Drawing.Size(830, 560)
+        Me.Size = New System.Drawing.Size(834, 560)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

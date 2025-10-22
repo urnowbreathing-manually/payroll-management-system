@@ -24,8 +24,8 @@ Partial Class HR_Login
     Private Sub InitializeComponent()
         Me.TestLabel = New System.Windows.Forms.Label()
         Me.LoginBtn = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtBox_EmpID = New System.Windows.Forms.TextBox()
+        Me.TxtBox_Password = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTodayLbl = New System.Windows.Forms.Label()
@@ -47,23 +47,23 @@ Partial Class HR_Login
         Me.LoginBtn.Location = New System.Drawing.Point(175, 225)
         Me.LoginBtn.Name = "LoginBtn"
         Me.LoginBtn.Size = New System.Drawing.Size(144, 34)
-        Me.LoginBtn.TabIndex = 1
+        Me.LoginBtn.TabIndex = 3
         Me.LoginBtn.Text = "Login"
         Me.LoginBtn.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'TxtBox_EmpID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(175, 119)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(143, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.TxtBox_EmpID.Location = New System.Drawing.Point(175, 119)
+        Me.TxtBox_EmpID.Name = "TxtBox_EmpID"
+        Me.TxtBox_EmpID.Size = New System.Drawing.Size(143, 20)
+        Me.TxtBox_EmpID.TabIndex = 1
         '
-        'TextBox2
+        'TxtBox_Password
         '
-        Me.TextBox2.Location = New System.Drawing.Point(174, 163)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(143, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.TxtBox_Password.Location = New System.Drawing.Point(174, 163)
+        Me.TxtBox_Password.Name = "TxtBox_Password"
+        Me.TxtBox_Password.Size = New System.Drawing.Size(143, 20)
+        Me.TxtBox_Password.TabIndex = 2
         '
         'Label1
         '
@@ -101,8 +101,8 @@ Partial Class HR_Login
         Me.Controls.Add(Me.DateTodayLbl)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TxtBox_Password)
+        Me.Controls.Add(Me.TxtBox_EmpID)
         Me.Controls.Add(Me.LoginBtn)
         Me.Controls.Add(Me.TestLabel)
         Me.Name = "HR_Login"
@@ -114,8 +114,8 @@ Partial Class HR_Login
 
     Friend WithEvents TestLabel As Label
     Friend WithEvents LoginBtn As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtBox_EmpID As TextBox
+    Friend WithEvents TxtBox_Password As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents DateTodayLbl As Label

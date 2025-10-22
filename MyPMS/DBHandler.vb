@@ -13,4 +13,17 @@
 
     Public Shared currentUser() As String = {"", "", "", "", ""}
 
+    Public Function AuthenticateUser(ByVal employeeID As String, ByVal password As String)
+        Dim authenticated As Boolean = False
+
+        For i As Integer = 0 To DBHandler.personnelTable.GetLength(0) - 1
+            If (DBHandler.personnelTable(i, 2) = employeeID) And (DBHandler.personnelTable(i, 3) = password) Then
+                authenticated = True
+                Return authenticated
+            End If
+        Next
+
+        Return authenticated
+    End Function
+
 End Class

@@ -33,7 +33,6 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MainPanel.BackColor = System.Drawing.Color.Transparent
-        Me.MainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.MainPanel.Location = New System.Drawing.Point(12, 45)
         Me.MainPanel.Name = "MainPanel"
         Me.MainPanel.Size = New System.Drawing.Size(989, 560)

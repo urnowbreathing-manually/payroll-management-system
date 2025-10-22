@@ -117,6 +117,7 @@ Partial Class Sidebar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(0, 0, 5, 0)
         Me.Name = "Sidebar"
         Me.Size = New System.Drawing.Size(150, 445)
         Me.Panel1.ResumeLayout(False)

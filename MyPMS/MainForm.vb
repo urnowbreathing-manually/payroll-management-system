@@ -12,6 +12,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim flowPanel As New FlowLayoutPanel
+        'flowPanel.Margin = New Padding(0, 0, 5, 0)
         flowPanel.FlowDirection = FlowDirection.LeftToRight
         'flowPanel.Size = MainPanel.Size
         flowPanel.AutoSize = True
