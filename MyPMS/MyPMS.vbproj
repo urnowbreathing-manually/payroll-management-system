@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHandler.vb" />
     <Compile Include="GeneratePayroll.Designer.vb">
       <DependentUpon>GeneratePayroll.vb</DependentUpon>
     </Compile>
