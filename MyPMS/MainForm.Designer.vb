@@ -24,6 +24,7 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.MainPanel = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'MainPanel
@@ -39,6 +40,16 @@ Partial Class MainForm
         Me.MainPanel.Size = New System.Drawing.Size(989, 560)
         Me.MainPanel.TabIndex = 0
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BackgroundImage = Global.MyPMS.My.Resources.Resources.MyPMS_6_transparent
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel1.Location = New System.Drawing.Point(12, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(109, 37)
+        Me.Panel1.TabIndex = 0
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -46,6 +57,7 @@ Partial Class MainForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1013, 617)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MainPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -58,4 +70,5 @@ Partial Class MainForm
     End Sub
 
     Friend WithEvents MainPanel As Panel
+    Friend WithEvents Panel1 As Panel
 End Class
