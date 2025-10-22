@@ -8,6 +8,24 @@
     End Sub
 
     Private Sub HR_Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Welcome Message retrieved from user info upon loggin in
         Lbl_WelcomeMsg.Text = "Welcome, " + DBHandler.currentUser(1) + " - " + DBHandler.currentUser(4)
+
+        ' Total number of employees, including HR
+        Lbl_TotalEmp_Dynamic.Text = DBHandler.personnelTable.GetLength(0).ToString
+
+        Dim totalEmployees As Integer = DBHandler.personnelTable.GetLength(0)
+        Dim ActiveEmployees As Integer = totalEmployees
+        For i As Integer = 0 To DBHandler.personnelTable.GetLength(0) - 1
+            If DBHandler.personnelTable(i, 5) = "Inactive" Then
+                ActiveEmployees -= 1
+            End If
+        Next
+
+        ' Number of currently active employees
+        Lbl_EmpCA_Dynamic.Text = ActiveEmployees
+
     End Sub
+
+
 End Class

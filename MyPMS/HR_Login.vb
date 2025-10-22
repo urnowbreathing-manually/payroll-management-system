@@ -8,7 +8,8 @@
     End Sub
 
     Private Sub HR_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
-        DateTodayLbl.Text = Date.Now.Date.ToString
+        DateTodayLbl.Text = DateTime.Now.ToString("MMMM d, yyyy - hh:mm tt")
+        DateTodayLbl.Location = New Point(((Panel1.Width - DateTodayLbl.Width) / 2), DateTodayLbl.Location.Y)
         TxtBox_EmpID.Text = "00001-HRA"
         TxtBox_Password.Text = "admin000"
     End Sub
@@ -51,7 +52,6 @@
         End If
 
     End Sub
-
 
 
 End Class

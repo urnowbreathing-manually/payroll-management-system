@@ -22,7 +22,7 @@ Partial Class GeneratePayroll
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGV_EmployeeList = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -46,21 +46,30 @@ Partial Class GeneratePayroll
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.EmpList_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpList_EmpName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpList_Salary = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpList_TotalHrs = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpList_Overtime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.DGV_EmployeeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DGV_EmployeeList
         '
-        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 350)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(799, 190)
-        Me.DataGridView1.TabIndex = 7
+        Me.DGV_EmployeeList.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.DGV_EmployeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_EmployeeList.BackgroundColor = System.Drawing.Color.MediumAquamarine
+        Me.DGV_EmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_EmployeeList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmpList_ID, Me.EmpList_EmpName, Me.EmpList_Salary, Me.EmpList_TotalHrs, Me.EmpList_Overtime})
+        Me.DGV_EmployeeList.Location = New System.Drawing.Point(20, 350)
+        Me.DGV_EmployeeList.Name = "DGV_EmployeeList"
+        Me.DGV_EmployeeList.Size = New System.Drawing.Size(799, 190)
+        Me.DGV_EmployeeList.TabIndex = 7
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 4
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
@@ -342,23 +351,48 @@ Partial Class GeneratePayroll
         Me.TextBox11.Size = New System.Drawing.Size(233, 26)
         Me.TextBox11.TabIndex = 20
         '
+        'EmpList_ID
+        '
+        Me.EmpList_ID.HeaderText = "ID"
+        Me.EmpList_ID.Name = "EmpList_ID"
+        '
+        'EmpList_EmpName
+        '
+        Me.EmpList_EmpName.HeaderText = "Employee Name"
+        Me.EmpList_EmpName.Name = "EmpList_EmpName"
+        '
+        'EmpList_Salary
+        '
+        Me.EmpList_Salary.HeaderText = "Salary"
+        Me.EmpList_Salary.Name = "EmpList_Salary"
+        '
+        'EmpList_TotalHrs
+        '
+        Me.EmpList_TotalHrs.HeaderText = "Total Hours"
+        Me.EmpList_TotalHrs.Name = "EmpList_TotalHrs"
+        '
+        'EmpList_Overtime
+        '
+        Me.EmpList_Overtime.HeaderText = "Ovetime"
+        Me.EmpList_Overtime.Name = "EmpList_Overtime"
+        '
         'GeneratePayroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DGV_EmployeeList)
         Me.Margin = New System.Windows.Forms.Padding(0)
         Me.Name = "GeneratePayroll"
         Me.Size = New System.Drawing.Size(834, 560)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_EmployeeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGV_EmployeeList As DataGridView
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -382,4 +416,9 @@ Partial Class GeneratePayroll
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents EmpList_ID As DataGridViewTextBoxColumn
+    Friend WithEvents EmpList_EmpName As DataGridViewTextBoxColumn
+    Friend WithEvents EmpList_Salary As DataGridViewTextBoxColumn
+    Friend WithEvents EmpList_TotalHrs As DataGridViewTextBoxColumn
+    Friend WithEvents EmpList_Overtime As DataGridViewTextBoxColumn
 End Class
