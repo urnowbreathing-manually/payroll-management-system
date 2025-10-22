@@ -16,8 +16,11 @@
     Public Function AuthenticateUser(ByVal employeeID As String, ByVal password As String)
         Dim authenticated As Boolean = False
 
-        For i As Integer = 0 To DBHandler.personnelTable.GetLength(0) - 1
-            If (DBHandler.personnelTable(i, 2) = employeeID) And (DBHandler.personnelTable(i, 3) = password) Then
+        For i As Integer = 0 To personnelTable.GetLength(0) - 1
+            If (personnelTable(i, 2) = employeeID) And (personnelTable(i, 3) = password) Then
+                For j As Integer = 0 To currentUser.GetLength(0) - 1
+                    currentUser(j) = personnelTable(i, j)
+                Next
                 authenticated = True
                 Return authenticated
             End If

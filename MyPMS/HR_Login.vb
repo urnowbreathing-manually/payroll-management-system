@@ -1,10 +1,8 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+﻿'Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class HR_Login
-
     Public Shared MainContentPanel As Panel
     Private dbHandler As DBHandler
-
     Public Sub New(Parent As Panel)
         InitializeComponent()
         MainContentPanel = Parent
@@ -13,7 +11,8 @@ Public Class HR_Login
 
     Private Sub HR_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
         DateTodayLbl.Text = Date.Now.Date.ToString
-
+        TxtBox_EmpID.Text = "00001-HRA"
+        TxtBox_Password.Text = "admin000"
     End Sub
 
     Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
@@ -37,12 +36,20 @@ Public Class HR_Login
         If dbHandler.AuthenticateUser(TxtBox_EmpID.Text, TxtBox_Password.Text) Then
             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             MainContentPanel.Controls.Clear()
+
+            Dim sideBar As New Sidebar(MainContentPanel)
+            sideBar.Dock = DockStyle.Left
+            MainContentPanel.Controls.Add(sideBar)
+
             Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
-            HR_Dashboard.Dock = DockStyle.Fill
+            HR_Dashboard.Dock = DockStyle.Right
             MainContentPanel.Controls.Add(HR_Dashboard)
+
         Else
             MessageBox.Show("Incorrect Employee ID / Password", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             TxtBox_EmpID.Focus()
+            TxtBox_EmpID.Clear()
+            TxtBox_Password.Clear()
         End If
 
     End Sub

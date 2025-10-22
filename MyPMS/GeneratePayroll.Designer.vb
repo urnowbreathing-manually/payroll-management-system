@@ -61,22 +61,22 @@ Partial Class GeneratePayroll
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label1.Location = New System.Drawing.Point(6, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 21)
+        Me.Label1.Size = New System.Drawing.Size(111, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Employee ID"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label2.Location = New System.Drawing.Point(55, 63)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 21)
+        Me.Label2.Size = New System.Drawing.Size(55, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Name"
         '
@@ -91,11 +91,11 @@ Partial Class GeneratePayroll
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label3.Location = New System.Drawing.Point(56, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 21)
+        Me.Label3.Size = New System.Drawing.Size(53, 20)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Email"
         '
@@ -119,11 +119,11 @@ Partial Class GeneratePayroll
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label4.Location = New System.Drawing.Point(10, 218)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 21)
+        Me.Label4.Size = New System.Drawing.Size(109, 20)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Gross salary"
         '
@@ -138,11 +138,11 @@ Partial Class GeneratePayroll
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label5.Location = New System.Drawing.Point(304, 218)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(97, 21)
+        Me.Label5.Size = New System.Drawing.Size(100, 20)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Deductions"
         '
@@ -157,11 +157,11 @@ Partial Class GeneratePayroll
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label6.Location = New System.Drawing.Point(607, 218)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 21)
+        Me.Label6.Size = New System.Drawing.Size(89, 20)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Net salary"
         '
@@ -176,22 +176,22 @@ Partial Class GeneratePayroll
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label7.Location = New System.Drawing.Point(16, 268)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(113, 21)
+        Me.Label7.Size = New System.Drawing.Size(115, 20)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Employee list"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label8.Location = New System.Drawing.Point(320, 99)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(81, 21)
+        Me.Label8.Size = New System.Drawing.Size(80, 20)
         Me.Label8.TabIndex = 20
         Me.Label8.Text = "Overtime"
         '
@@ -206,11 +206,11 @@ Partial Class GeneratePayroll
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label9.Location = New System.Drawing.Point(306, 58)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(95, 21)
+        Me.Label9.Size = New System.Drawing.Size(99, 20)
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Total hours"
         '
@@ -225,11 +225,11 @@ Partial Class GeneratePayroll
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label11.Location = New System.Drawing.Point(13, 145)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(100, 21)
+        Me.Label11.Size = New System.Drawing.Size(104, 20)
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "Contact No."
         '
@@ -245,11 +245,11 @@ Partial Class GeneratePayroll
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label10.Location = New System.Drawing.Point(365, 145)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(36, 21)
+        Me.Label10.Size = New System.Drawing.Size(37, 20)
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "Tax"
         '
@@ -264,11 +264,11 @@ Partial Class GeneratePayroll
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label12.Location = New System.Drawing.Point(596, 58)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(76, 21)
+        Me.Label12.Size = New System.Drawing.Size(79, 20)
         Me.Label12.TabIndex = 26
         Me.Label12.Text = "Pay date"
         '
@@ -284,7 +284,7 @@ Partial Class GeneratePayroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.SeaGreen
+        Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.Label10)
