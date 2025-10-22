@@ -1,29 +1,13 @@
 ﻿Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        'Display the HR Login
         MainPanel.Dock = DockStyle.None
         Dim HR_Login As New HR_Login(MainPanel)
-        HR_Login.Location = New Point((MainPanel.Width - HR_Login.Width) \ 2,
-                             (MainPanel.Height - HR_Login.Height) \ 2)
+        HR_Login.Location = New Point((MainPanel.Width - HR_Login.Width) \ 2, (MainPanel.Height - HR_Login.Height) \ 2)
         MainPanel.Controls.Add(HR_Login)
     End Sub
-
-
-    'Private Sub Show(sender As Object, e As EventArgs)
-    '    MainPanel.Dock = DockStyle.None
-    '    Dim HR_Login As New HR_Login(MainPanel)
-
-    '    HR_Login.Location = New Point((MainPanel.Width - HR_Login.Width) \ 2,
-    '                         (MainPanel.Height - HR_Login.Height) \ 2)
-    '    MainPanel.Controls.Add(HR_Login)
-    'End Sub
-
-    'Private Sub Hide(sender As Object, e As EventArgs)
-    '    MainPanel.Dock = DockStyle.None
-    '    MainPanel.Controls.Clear()
-    'End Sub
-
-
 
     Private Sub MainForm_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         ReloadContent()

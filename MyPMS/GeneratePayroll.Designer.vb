@@ -51,21 +51,19 @@ Partial Class GeneratePayroll
         '
         'TextBox1
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(133, 17)
+        Me.TextBox1.Location = New System.Drawing.Point(117, 17)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(108, 29)
         Me.TextBox1.TabIndex = 0
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(22, 20)
+        Me.Label1.Location = New System.Drawing.Point(6, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(107, 21)
         Me.Label1.TabIndex = 2
@@ -73,11 +71,10 @@ Partial Class GeneratePayroll
         '
         'Label2
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(71, 63)
+        Me.Label2.Location = New System.Drawing.Point(55, 63)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(56, 21)
         Me.Label2.TabIndex = 4
@@ -85,20 +82,18 @@ Partial Class GeneratePayroll
         '
         'TextBox2
         '
-        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(133, 60)
+        Me.TextBox2.Location = New System.Drawing.Point(117, 60)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(185, 29)
         Me.TextBox2.TabIndex = 3
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(72, 104)
+        Me.Label3.Location = New System.Drawing.Point(56, 104)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 21)
         Me.Label3.TabIndex = 6
@@ -106,30 +101,27 @@ Partial Class GeneratePayroll
         '
         'TextBox3
         '
-        Me.TextBox3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(133, 101)
+        Me.TextBox3.Location = New System.Drawing.Point(117, 101)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(185, 29)
         Me.TextBox3.TabIndex = 5
         '
         'DataGridView1
         '
-        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(20, 292)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(947, 248)
+        Me.DataGridView1.Size = New System.Drawing.Size(788, 248)
         Me.DataGridView1.TabIndex = 7
         '
         'Label4
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(26, 218)
+        Me.Label4.Location = New System.Drawing.Point(10, 218)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 21)
         Me.Label4.TabIndex = 9
@@ -137,20 +129,18 @@ Partial Class GeneratePayroll
         '
         'TextBox4
         '
-        Me.TextBox4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(133, 215)
+        Me.TextBox4.Location = New System.Drawing.Point(117, 215)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(185, 29)
         Me.TextBox4.TabIndex = 8
         '
         'Label5
         '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(351, 218)
+        Me.Label5.Location = New System.Drawing.Point(304, 218)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(97, 21)
         Me.Label5.TabIndex = 11
@@ -158,20 +148,18 @@ Partial Class GeneratePayroll
         '
         'TextBox5
         '
-        Me.TextBox5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(454, 215)
+        Me.TextBox5.Location = New System.Drawing.Point(407, 215)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(185, 29)
         Me.TextBox5.TabIndex = 10
         '
         'Label6
         '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(689, 218)
+        Me.Label6.Location = New System.Drawing.Point(607, 218)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(88, 21)
         Me.Label6.TabIndex = 13
@@ -179,11 +167,10 @@ Partial Class GeneratePayroll
         '
         'TextBox6
         '
-        Me.TextBox6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(782, 215)
+        Me.TextBox6.Location = New System.Drawing.Point(700, 215)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(185, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(108, 29)
         Me.TextBox6.TabIndex = 12
         '
         'Label7
@@ -199,11 +186,10 @@ Partial Class GeneratePayroll
         '
         'Label8
         '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label8.Location = New System.Drawing.Point(389, 99)
+        Me.Label8.Location = New System.Drawing.Point(320, 99)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 21)
         Me.Label8.TabIndex = 20
@@ -211,20 +197,18 @@ Partial Class GeneratePayroll
         '
         'TextBox7
         '
-        Me.TextBox7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(476, 96)
+        Me.TextBox7.Location = New System.Drawing.Point(407, 96)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(185, 29)
         Me.TextBox7.TabIndex = 19
         '
         'Label9
         '
-        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label9.Location = New System.Drawing.Point(375, 58)
+        Me.Label9.Location = New System.Drawing.Point(306, 58)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(95, 21)
         Me.Label9.TabIndex = 18
@@ -232,20 +216,18 @@ Partial Class GeneratePayroll
         '
         'TextBox8
         '
-        Me.TextBox8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(476, 55)
+        Me.TextBox8.Location = New System.Drawing.Point(407, 55)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(185, 29)
         Me.TextBox8.TabIndex = 17
         '
         'Label11
         '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label11.Location = New System.Drawing.Point(29, 145)
+        Me.Label11.Location = New System.Drawing.Point(13, 145)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(100, 21)
         Me.Label11.TabIndex = 22
@@ -253,20 +235,18 @@ Partial Class GeneratePayroll
         '
         'TextBox10
         '
-        Me.TextBox10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(133, 142)
+        Me.TextBox10.Location = New System.Drawing.Point(117, 142)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(185, 29)
         Me.TextBox10.TabIndex = 21
         '
         'Label10
         '
-        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label10.Location = New System.Drawing.Point(434, 145)
+        Me.Label10.Location = New System.Drawing.Point(365, 145)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(36, 21)
         Me.Label10.TabIndex = 24
@@ -274,20 +254,18 @@ Partial Class GeneratePayroll
         '
         'TextBox9
         '
-        Me.TextBox9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(476, 142)
+        Me.TextBox9.Location = New System.Drawing.Point(407, 142)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(185, 29)
         Me.TextBox9.TabIndex = 23
         '
         'Label12
         '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label12.Location = New System.Drawing.Point(700, 58)
+        Me.Label12.Location = New System.Drawing.Point(596, 58)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(76, 21)
         Me.Label12.TabIndex = 26
@@ -295,11 +273,10 @@ Partial Class GeneratePayroll
         '
         'TextBox11
         '
-        Me.TextBox11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBox11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(782, 55)
+        Me.TextBox11.Location = New System.Drawing.Point(671, 55)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(185, 29)
+        Me.TextBox11.Size = New System.Drawing.Size(137, 29)
         Me.TextBox11.TabIndex = 25
         '
         'GeneratePayroll
@@ -332,7 +309,7 @@ Partial Class GeneratePayroll
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "GeneratePayroll"
-        Me.Size = New System.Drawing.Size(989, 560)
+        Me.Size = New System.Drawing.Size(830, 560)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
