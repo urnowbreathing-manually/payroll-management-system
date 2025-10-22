@@ -33,6 +33,7 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MainPanel.BackColor = System.Drawing.Color.Transparent
+        Me.MainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.MainPanel.Location = New System.Drawing.Point(12, 45)
         Me.MainPanel.Name = "MainPanel"
         Me.MainPanel.Size = New System.Drawing.Size(989, 560)
@@ -56,7 +57,9 @@ Partial Class MainForm
         Me.ClientSize = New System.Drawing.Size(1013, 617)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MainPanel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MyPMS: Payroll Management System"
