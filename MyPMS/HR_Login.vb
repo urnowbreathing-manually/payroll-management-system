@@ -1,6 +1,4 @@
-﻿'Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
-
-Public Class HR_Login
+﻿Public Class HR_Login
     Public Shared MainContentPanel As Panel
     Private dbHandler As DBHandler
     Public Sub New(Parent As Panel)
@@ -16,9 +14,6 @@ Public Class HR_Login
     End Sub
 
     Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
-        'Clear current user info when logging out
-        DBHandler.currentUser = {"", "", "", "", ""}
-
         ' Error handling
         If String.IsNullOrWhiteSpace(TxtBox_EmpID.Text) Then
             MessageBox.Show("Employee ID is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -37,15 +32,18 @@ Public Class HR_Login
             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             MainContentPanel.Controls.Clear()
 
+            ' Load Sidebar
             Dim sideBar As New Sidebar(MainContentPanel)
             sideBar.Dock = DockStyle.Left
             MainContentPanel.Controls.Add(sideBar)
 
+            ' Load HR_Dashboard
             Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
             HR_Dashboard.Dock = DockStyle.Right
             MainContentPanel.Controls.Add(HR_Dashboard)
 
         Else
+            ' Clears both textboxes after incorrect input
             MessageBox.Show("Incorrect Employee ID / Password", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             TxtBox_EmpID.Focus()
             TxtBox_EmpID.Clear()
