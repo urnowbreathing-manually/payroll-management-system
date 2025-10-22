@@ -25,7 +25,7 @@ Partial Class GeneratePayroll
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.EmployeeNameTxtBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -41,7 +41,7 @@ Partial Class GeneratePayroll
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.ContactNoTxtBox = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -83,14 +83,14 @@ Partial Class GeneratePayroll
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Name"
         '
-        'TextBox2
+        'EmployeeNameTxtBox
         '
-        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(133, 60)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox2.TabIndex = 3
+        Me.EmployeeNameTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.EmployeeNameTxtBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EmployeeNameTxtBox.Location = New System.Drawing.Point(133, 60)
+        Me.EmployeeNameTxtBox.Name = "EmployeeNameTxtBox"
+        Me.EmployeeNameTxtBox.Size = New System.Drawing.Size(185, 29)
+        Me.EmployeeNameTxtBox.TabIndex = 3
         '
         'Label3
         '
@@ -251,14 +251,14 @@ Partial Class GeneratePayroll
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "Contact No."
         '
-        'TextBox10
+        'ContactNoTxtBox
         '
-        Me.TextBox10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(133, 142)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(185, 29)
-        Me.TextBox10.TabIndex = 21
+        Me.ContactNoTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ContactNoTxtBox.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ContactNoTxtBox.Location = New System.Drawing.Point(133, 142)
+        Me.ContactNoTxtBox.Name = "ContactNoTxtBox"
+        Me.ContactNoTxtBox.Size = New System.Drawing.Size(185, 29)
+        Me.ContactNoTxtBox.TabIndex = 21
         '
         'Label10
         '
@@ -312,7 +312,7 @@ Partial Class GeneratePayroll
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.ContactNoTxtBox)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label9)
@@ -328,7 +328,7 @@ Partial Class GeneratePayroll
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.EmployeeNameTxtBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "GeneratePayroll"
@@ -342,7 +342,7 @@ Partial Class GeneratePayroll
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents EmployeeNameTxtBox As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
@@ -358,7 +358,7 @@ Partial Class GeneratePayroll
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents ContactNoTxtBox As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label12 As Label

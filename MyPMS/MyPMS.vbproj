@@ -79,6 +79,7 @@
     <Compile Include="GeneratePayroll.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Globals.vb" />
     <Compile Include="HR_Dashboard.Designer.vb">
       <DependentUpon>HR_Dashboard.vb</DependentUpon>
     </Compile>
