@@ -30,8 +30,9 @@
 
         ' Account Verification using DBHandler
         If dbHandler.AuthenticateUser(TxtBox_EmpID.Text, TxtBox_Password.Text) Then
-            'MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             MainContentPanel.Controls.Clear()
+            TblPanel.Controls.Clear()
 
             ' Load Sidebar
             Dim sideBar As New Sidebar(MainContentPanel)
