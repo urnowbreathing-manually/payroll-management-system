@@ -30,18 +30,37 @@
 
         ' Account Verification using DBHandler
         If dbHandler.AuthenticateUser(TxtBox_EmpID.Text, TxtBox_Password.Text) Then
-            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             MainContentPanel.Controls.Clear()
 
             ' Load Sidebar
             Dim sideBar As New Sidebar(MainContentPanel)
-            sideBar.Dock = DockStyle.Left
-            MainContentPanel.Controls.Add(sideBar)
+            sideBar.Dock = DockStyle.Fill
 
             ' Load HR_Dashboard
             Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
             HR_Dashboard.Dock = DockStyle.Right
-            MainContentPanel.Controls.Add(HR_Dashboard)
+
+            TblPanel.BackColor = Color.Green
+            TblPanel.Dock = DockStyle.Fill
+            TblPanel.AutoScroll = True
+
+            TblPanel.ColumnCount = 2
+            TblPanel.ColumnStyles.Clear()
+
+            TblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, sideBar.Width + 5))
+            TblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100))
+
+            TblPanel.RowCount = 1
+            TblPanel.RowStyles.Clear()
+            TblPanel.RowStyles.Add(New RowStyle(SizeType.Percent, 100))
+
+            sideBar.Dock = DockStyle.Fill
+
+            TblPanel.Controls.Add(sideBar, 0, 0)
+            TblPanel.Controls.Add(HR_Dashboard, 1, 0)
+
+            MainContentPanel.Controls.Add(TblPanel)
 
         Else
             ' Clears both textboxes after incorrect input

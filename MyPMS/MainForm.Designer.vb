@@ -59,9 +59,7 @@ Partial Class MainForm
         Me.ClientSize = New System.Drawing.Size(1013, 617)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MainPanel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MyPMS: Payroll Management System"

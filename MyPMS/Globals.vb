@@ -1,4 +1,7 @@
 ﻿Module Globals
+
+    Public TblPanel As New TableLayoutPanel
+
     'Public Sub HandleLettersOnly(sender As Object, e As KeyPressEventArgs)
     '    If Char.IsDigit(e.KeyChar) And Not Asc(e.KeyChar) = 8 Then
     '        e.Handled = True

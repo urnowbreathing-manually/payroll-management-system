@@ -6,32 +6,22 @@
         MainContentPanel = Parent
     End Sub
 
+
+
     Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
-        MainContentPanel.Controls.Clear()
-
-        ' Load Sidebar
-        Dim sideBar As New Sidebar(MainContentPanel)
-        sideBar.Dock = DockStyle.Left
-        MainContentPanel.Controls.Add(sideBar)
-
-        ' Load HR_Dashboard
         Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
-        HR_Dashboard.Dock = DockStyle.Right
-        MainContentPanel.Controls.Add(HR_Dashboard)
+        HR_Dashboard.Dock = DockStyle.Fill
+
+        TblPanel.Controls.RemoveAt(1)
+        TblPanel.Controls.Add(HR_Dashboard, 1, 0)
     End Sub
 
     Private Sub Btn_Payroll_Click(sender As Object, e As EventArgs) Handles Btn_Payroll.Click
-        MainContentPanel.Controls.Clear()
-
-        ' Load sidebar
-        Dim sideBar As New Sidebar(MainContentPanel)
-        sideBar.Dock = DockStyle.Left
-        MainContentPanel.Controls.Add(sideBar)
-
-        ' Load GeneratePayroll
         Dim generatePayroll As New GeneratePayroll(MainContentPanel)
-        generatePayroll.Dock = DockStyle.Right
-        MainContentPanel.Controls.Add(generatePayroll)
+        generatePayroll.Dock = DockStyle.Fill
+
+        TblPanel.Controls.RemoveAt(1)
+        TblPanel.Controls.Add(generatePayroll, 1, 0)
     End Sub
 
     Private Sub Btn_Logout_Click(sender As Object, e As EventArgs) Handles Btn_Logout.Click
@@ -47,4 +37,6 @@
         MainContentPanel.Controls.Add(HR_Login)
 
     End Sub
+
+
 End Class
