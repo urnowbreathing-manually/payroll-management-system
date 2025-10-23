@@ -32,6 +32,7 @@
         If dbHandler.AuthenticateUser(TxtBox_EmpID.Text, TxtBox_Password.Text) Then
             'MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             MainContentPanel.Controls.Clear()
+            TblPanel.Controls.Clear()
 
             ' Load Sidebar
             Dim sideBar As New Sidebar(MainContentPanel)
@@ -41,7 +42,6 @@
             Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
             HR_Dashboard.Dock = DockStyle.Right
 
-            TblPanel.BackColor = Color.Green
             TblPanel.Dock = DockStyle.Fill
             TblPanel.AutoScroll = True
 
