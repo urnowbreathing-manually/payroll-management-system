@@ -39,7 +39,8 @@
 
             ' Load HR_Dashboard
             Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
-            HR_Dashboard.Dock = DockStyle.Right
+            'HR_Dashboard.Dock = DockStyle.Right
+            HR_Dashboard.Anchor = AnchorStyles.Left Or AnchorStyles.Bottom Or AnchorStyles.Right Or AnchorStyles.Top
 
             TblPanel.Dock = DockStyle.Fill
             TblPanel.AutoScroll = True
