@@ -84,6 +84,12 @@
     <Compile Include="GeneratePayroll.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="GenPayroll_Dialog.Designer.vb">
+      <DependentUpon>GenPayroll_Dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GenPayroll_Dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Globals.vb" />
     <Compile Include="HR_Dashboard.Designer.vb">
       <DependentUpon>HR_Dashboard.vb</DependentUpon>
@@ -129,6 +135,9 @@
   <ItemGroup>
     <EmbeddedResource Include="GeneratePayroll.resx">
       <DependentUpon>GeneratePayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenPayroll_Dialog.resx">
+      <DependentUpon>GenPayroll_Dialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HR_Dashboard.resx">
       <DependentUpon>HR_Dashboard.vb</DependentUpon>

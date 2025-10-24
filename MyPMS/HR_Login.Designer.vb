@@ -23,13 +23,13 @@ Partial Class HR_Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TestLabel = New System.Windows.Forms.Label()
-        Me.LoginBtn = New System.Windows.Forms.Button()
         Me.TxtBox_EmpID = New System.Windows.Forms.TextBox()
         Me.TxtBox_Password = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTodayLbl = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.LoginBtn = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,17 +42,6 @@ Partial Class HR_Login
         Me.TestLabel.TabIndex = 0
         Me.TestLabel.Text = "Employee ID* :"
         Me.TestLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'LoginBtn
-        '
-        Me.LoginBtn.BackColor = System.Drawing.Color.LawnGreen
-        Me.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LoginBtn.Location = New System.Drawing.Point(107, 221)
-        Me.LoginBtn.Name = "LoginBtn"
-        Me.LoginBtn.Size = New System.Drawing.Size(254, 62)
-        Me.LoginBtn.TabIndex = 3
-        Me.LoginBtn.Text = "Login"
-        Me.LoginBtn.UseVisualStyleBackColor = False
         '
         'TxtBox_EmpID
         '
@@ -113,6 +102,17 @@ Partial Class HR_Login
         Me.Panel1.Size = New System.Drawing.Size(425, 84)
         Me.Panel1.TabIndex = 7
         '
+        'LoginBtn
+        '
+        Me.LoginBtn.BackColor = System.Drawing.Color.LawnGreen
+        Me.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LoginBtn.Location = New System.Drawing.Point(120, 220)
+        Me.LoginBtn.Name = "LoginBtn"
+        Me.LoginBtn.Size = New System.Drawing.Size(250, 60)
+        Me.LoginBtn.TabIndex = 3
+        Me.LoginBtn.Text = "Login"
+        Me.LoginBtn.UseVisualStyleBackColor = False
+        '
         'HR_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -135,11 +135,11 @@ Partial Class HR_Login
     End Sub
 
     Friend WithEvents TestLabel As Label
-    Friend WithEvents LoginBtn As Button
     Friend WithEvents TxtBox_EmpID As TextBox
     Friend WithEvents TxtBox_Password As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents DateTodayLbl As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents LoginBtn As Button
 End Class

@@ -9,8 +9,8 @@ Public Class DBHandler
 
 
     ' denina connection string dont remove
-    Private ConnectionString As String = "server=localhost;user=root;database=MyPMS;port=3306;password=washer22456;"
-    'Private ConnectionString As String = "server=localhost;user=root;database=MyPMS;port=3306;password=;"
+    'Private ConnectionString As String = "server=localhost;user=root;database=MyPMS;port=3306;password=washer22456;"
+    Private ConnectionString As String = "server=localhost;user=root;database=MyPMS;port=3306;password=;"
 
 
 
@@ -22,7 +22,7 @@ Public Class DBHandler
 
 
     ' for GeneratePayroll Form to retrieve all employee data
-    Public Function RetrieveAllEmployeeData(dgv As DataGridView)
+    Public Sub RetrieveAllEmployeeData(dgv As DataGridView)
         Try
             conn.Open()
             Dim query As String = "SELECT * FROM employees"
@@ -44,7 +44,7 @@ Public Class DBHandler
                 conn.Close()
             End If
         End Try
-    End Function
+    End Sub
 
 
 

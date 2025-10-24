@@ -37,7 +37,7 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MainPanel.BackColor = System.Drawing.Color.Transparent
         Me.MainPanel.BackgroundImage = Global.MyPMS.My.Resources.Resources.MyPMS_2_tansparent
-        Me.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.MainPanel.Location = New System.Drawing.Point(0, 50)
         Me.MainPanel.Margin = New System.Windows.Forms.Padding(0)
         Me.MainPanel.Name = "MainPanel"
@@ -71,7 +71,9 @@ Partial Class MainForm
         '
         'Navbar_Header
         '
+        Me.Navbar_Header.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Navbar_Header.AutoSize = True
+        Me.Navbar_Header.BackColor = System.Drawing.Color.Transparent
         Me.Navbar_Header.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Navbar_Header.Location = New System.Drawing.Point(470, 10)
         Me.Navbar_Header.Name = "Navbar_Header"

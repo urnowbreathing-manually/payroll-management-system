@@ -100,7 +100,7 @@ Partial Class HR_Dashboard
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(830, 100)
         Me.TableLayoutPanel1.TabIndex = 23
         '
@@ -121,7 +121,7 @@ Partial Class HR_Dashboard
         '
         Me.Lbl_PayrollP_Dynamic.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Lbl_PayrollP_Dynamic.AutoSize = True
-        Me.Lbl_PayrollP_Dynamic.BackColor = System.Drawing.SystemColors.Control
+        Me.Lbl_PayrollP_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_PayrollP_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Lbl_PayrollP_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_PayrollP_Dynamic.Location = New System.Drawing.Point(83, 50)
@@ -135,7 +135,7 @@ Partial Class HR_Dashboard
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.SystemColors.Control
+        Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(33, 10)
@@ -163,7 +163,7 @@ Partial Class HR_Dashboard
         '
         Me.Lbl_EmpCA_Dynamic.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Lbl_EmpCA_Dynamic.AutoSize = True
-        Me.Lbl_EmpCA_Dynamic.BackColor = System.Drawing.SystemColors.Control
+        Me.Lbl_EmpCA_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_EmpCA_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Lbl_EmpCA_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_EmpCA_Dynamic.Location = New System.Drawing.Point(80, 50)
@@ -177,7 +177,7 @@ Partial Class HR_Dashboard
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(0, 10)
@@ -205,7 +205,7 @@ Partial Class HR_Dashboard
         '
         Me.Lbl_TotalEmp_Dynamic.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Lbl_TotalEmp_Dynamic.AutoSize = True
-        Me.Lbl_TotalEmp_Dynamic.BackColor = System.Drawing.SystemColors.Control
+        Me.Lbl_TotalEmp_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_TotalEmp_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Lbl_TotalEmp_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_TotalEmp_Dynamic.Location = New System.Drawing.Point(80, 50)
@@ -219,7 +219,7 @@ Partial Class HR_Dashboard
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(30, 10)
@@ -247,7 +247,7 @@ Partial Class HR_Dashboard
         '
         Me.Lbl_PayrollTM_Dynamic.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Lbl_PayrollTM_Dynamic.AutoSize = True
-        Me.Lbl_PayrollTM_Dynamic.BackColor = System.Drawing.SystemColors.Control
+        Me.Lbl_PayrollTM_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_PayrollTM_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Lbl_PayrollTM_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_PayrollTM_Dynamic.Location = New System.Drawing.Point(33, 50)
@@ -261,7 +261,7 @@ Partial Class HR_Dashboard
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.SystemColors.Control
+        Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(3, 10)
@@ -305,7 +305,7 @@ Partial Class HR_Dashboard
         '
         Me.Lbl_OnLeave.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Lbl_OnLeave.AutoSize = True
-        Me.Lbl_OnLeave.BackColor = System.Drawing.SystemColors.Control
+        Me.Lbl_OnLeave.BackColor = System.Drawing.Color.White
         Me.Lbl_OnLeave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Lbl_OnLeave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_OnLeave.Location = New System.Drawing.Point(50, 10)
@@ -331,7 +331,7 @@ Partial Class HR_Dashboard
         '
         Me.Lbl_OnOvertime.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Lbl_OnOvertime.AutoSize = True
-        Me.Lbl_OnOvertime.BackColor = System.Drawing.SystemColors.Control
+        Me.Lbl_OnOvertime.BackColor = System.Drawing.Color.White
         Me.Lbl_OnOvertime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Lbl_OnOvertime.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_OnOvertime.Location = New System.Drawing.Point(41, 10)

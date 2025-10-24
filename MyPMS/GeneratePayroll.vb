@@ -14,8 +14,12 @@
     Private Sub GeneratePayroll_Load(sender As Object, e As EventArgs) Handles Me.Load
         DBHandler = New DBHandler()
 
-        AddHandler txtbxEmployeeName.KeyPress, AddressOf HandleLettersOnly
+        'AddHandler TxtBox_EmployeeName.KeyPress, AddressOf HandleLettersOnly
         dbHandler.RetrieveAllEmployeeData(DGV_EmployeeList)
+    End Sub
+
+    Private Sub Btn_GeneratePayroll_Click(sender As Object, e As EventArgs) Handles Btn_GeneratePayroll.Click
+        GenPayroll_Dialog.Show()
     End Sub
 
 End Class
