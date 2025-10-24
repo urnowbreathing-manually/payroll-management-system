@@ -36,6 +36,16 @@
             Return
         End If
 
+        'FocusedPanel = DashboardPanel
+
+        'For Each pnl As Panel In SuperMainPanel.Controls
+        '    If Not pnl.Name = FocusedPanel.Name Then
+        '        pnl.Visible = False
+        '    Else
+        '        pnl.Visible = True
+        '    End If
+        'Next
+
         ' old
         Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
         HR_Dashboard.Dock = DockStyle.Fill

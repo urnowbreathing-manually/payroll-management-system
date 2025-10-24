@@ -16,6 +16,7 @@
 
         AddHandler txtbxEmployeeName.KeyPress, AddressOf HandleLettersOnly
         dbHandler.RetrieveAllEmployeeData(DGV_EmployeeList)
+        dbHandler.PopulateEmployeeFlowPanel(DGV_EmployeeList, FlowLayoutPanel1)
     End Sub
 
 End Class

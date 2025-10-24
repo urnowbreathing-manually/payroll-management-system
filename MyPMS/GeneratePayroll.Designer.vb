@@ -23,11 +23,6 @@ Partial Class GeneratePayroll
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DGV_EmployeeList = New System.Windows.Forms.DataGridView()
-        Me.EmpList_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpList_EmpName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpList_Salary = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpList_TotalHrs = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpList_Overtime = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -62,6 +57,7 @@ Partial Class GeneratePayroll
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.DGV_EmployeeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -81,36 +77,11 @@ Partial Class GeneratePayroll
         Me.DGV_EmployeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGV_EmployeeList.BackgroundColor = System.Drawing.Color.White
         Me.DGV_EmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_EmployeeList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmpList_ID, Me.EmpList_EmpName, Me.EmpList_Salary, Me.EmpList_TotalHrs, Me.EmpList_Overtime})
-        Me.DGV_EmployeeList.Location = New System.Drawing.Point(20, 472)
+        Me.DGV_EmployeeList.Location = New System.Drawing.Point(980, 220)
         Me.DGV_EmployeeList.Name = "DGV_EmployeeList"
-        Me.DGV_EmployeeList.Size = New System.Drawing.Size(1139, 209)
+        Me.DGV_EmployeeList.Size = New System.Drawing.Size(159, 209)
         Me.DGV_EmployeeList.TabIndex = 7
-        '
-        'EmpList_ID
-        '
-        Me.EmpList_ID.HeaderText = "ID"
-        Me.EmpList_ID.Name = "EmpList_ID"
-        '
-        'EmpList_EmpName
-        '
-        Me.EmpList_EmpName.HeaderText = "Employee Name"
-        Me.EmpList_EmpName.Name = "EmpList_EmpName"
-        '
-        'EmpList_Salary
-        '
-        Me.EmpList_Salary.HeaderText = "Salary"
-        Me.EmpList_Salary.Name = "EmpList_Salary"
-        '
-        'EmpList_TotalHrs
-        '
-        Me.EmpList_TotalHrs.HeaderText = "Total Hours"
-        Me.EmpList_TotalHrs.Name = "EmpList_TotalHrs"
-        '
-        'EmpList_Overtime
-        '
-        Me.EmpList_Overtime.HeaderText = "Ovetime"
-        Me.EmpList_Overtime.Name = "EmpList_Overtime"
+        Me.DGV_EmployeeList.Visible = False
         '
         'Panel1
         '
@@ -493,11 +464,24 @@ Partial Class GeneratePayroll
         Me.Label15.TabIndex = 57
         Me.Label15.Text = "5"
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FlowLayoutPanel1.AutoScroll = True
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(20, 460)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1120, 220)
+        Me.FlowLayoutPanel1.TabIndex = 60
+        '
         'GeneratePayroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Transparent
+        Me.BackColor = System.Drawing.Color.Gray
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel3)
@@ -522,11 +506,6 @@ Partial Class GeneratePayroll
 
     End Sub
     Friend WithEvents DGV_EmployeeList As DataGridView
-    Friend WithEvents EmpList_ID As DataGridViewTextBoxColumn
-    Friend WithEvents EmpList_EmpName As DataGridViewTextBoxColumn
-    Friend WithEvents EmpList_Salary As DataGridViewTextBoxColumn
-    Friend WithEvents EmpList_TotalHrs As DataGridViewTextBoxColumn
-    Friend WithEvents EmpList_Overtime As DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnGeneratePayroll As Button
@@ -561,4 +540,5 @@ Partial Class GeneratePayroll
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class
