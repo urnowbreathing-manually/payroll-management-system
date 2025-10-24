@@ -58,7 +58,7 @@ Partial Class GenPayroll_Dialog
         Me.Lbl_Header.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Lbl_Header.AutoSize = True
         Me.Lbl_Header.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Lbl_Header.Location = New System.Drawing.Point(124, 12)
+        Me.Lbl_Header.Location = New System.Drawing.Point(125, 13)
         Me.Lbl_Header.Margin = New System.Windows.Forms.Padding(0)
         Me.Lbl_Header.Name = "Lbl_Header"
         Me.Lbl_Header.Size = New System.Drawing.Size(173, 25)
@@ -327,7 +327,6 @@ Partial Class GenPayroll_Dialog
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Lbl_Header)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -382,6 +381,7 @@ Partial Class GenPayroll_Dialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "GenPayroll_Dialog"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Generate Payroll"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
