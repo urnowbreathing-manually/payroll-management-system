@@ -39,8 +39,9 @@
         ' old
         Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
         HR_Dashboard.Dock = DockStyle.Fill
+
         TblPanel.Controls.RemoveAt(1)
-        TblPanel.Controls.Add(DashboardPanel, 1, 0)
+        TblPanel.Controls.Add(HR_Dashboard, 1, 0)
     End Sub
 
     Private Sub Btn_Payroll_Click(sender As Object, e As EventArgs) Handles Btn_Payroll.Click
@@ -51,8 +52,9 @@
         ' old
         Dim generatePayroll As New GeneratePayroll(MainContentPanel)
         generatePayroll.Dock = DockStyle.Fill
+
         TblPanel.Controls.RemoveAt(1)
-        TblPanel.Controls.Add(GeneratePayrollPanel, 1, 0)
+        TblPanel.Controls.Add(generatePayroll, 1, 0)
     End Sub
 
     Private Sub Btn_Logout_Click(sender As Object, e As EventArgs) Handles Btn_Logout.Click

@@ -3,17 +3,17 @@
     Public TblPanel As New TableLayoutPanel
 
     ' panels for form
-    Public DashboardPanel As New Panel With {
-        .Dock = DockStyle.Fill
-    }
+    'Public DashboardPanel As New Panel With {
+    '   .Dock = DockStyle.Fill
+    '}
 
-    Public GeneratePayrollPanel As New Panel With {
-        .Dock = DockStyle.Fill
-    }
+    'Public GeneratePayrollPanel As New Panel With {
+    '   .Dock = DockStyle.Fill
+    '}
 
-    Public SuperMainPanel As New Panel With {
-        .Dock = DockStyle.Fill
-    }
+    'Public SuperMainPanel As New Panel With {
+    '   .Dock = DockStyle.Fill
+    '}
 
 
     Public Sub HandleLettersOnly(sender As Object, e As KeyPressEventArgs)

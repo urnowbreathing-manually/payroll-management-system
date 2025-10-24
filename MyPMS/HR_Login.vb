@@ -1,11 +1,7 @@
 ﻿Public Class HR_Login
     Public Shared MainContentPanel As Panel
     Private dbHandler As DBHandler
-<<<<<<< HEAD
 
-
-=======
->>>>>>> zantua
     Public Sub New(Parent As Panel)
         InitializeComponent()
         MainContentPanel = Parent
@@ -43,17 +39,10 @@
             sideBar.Dock = DockStyle.Fill
 
             ' Load HR_Dashboard
-<<<<<<< HEAD
-            Dim HR_Dashboard As New HR_Dashboard(DashboardPanel)
-            HR_Dashboard.Dock = DockStyle.Fill
-
-            Dim generatePayroll As New GeneratePayroll(GeneratePayrollPanel)
-            generatePayroll.Dock = DockStyle.Fill
-=======
             Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
-            'HR_Dashboard.Dock = DockStyle.Right
+            HR_Dashboard.Dock = DockStyle.Fill
             HR_Dashboard.Anchor = AnchorStyles.Left Or AnchorStyles.Bottom Or AnchorStyles.Right Or AnchorStyles.Top
->>>>>>> zantua
+
 
             TblPanel.Dock = DockStyle.Fill
             TblPanel.AutoScroll = True
@@ -70,25 +59,21 @@
 
             sideBar.Dock = DockStyle.Fill
 
-            ' instead of loading panel everytime, load everything then switch around em
-            GeneratePayrollPanel.Controls.Add(generatePayroll)
-            DashboardPanel.Controls.Add(HR_Dashboard)
-
-<<<<<<< HEAD
-
-            SuperMainPanel.Controls.Add(GeneratePayrollPanel)
-            SuperMainPanel.Controls.Add(DashboardPanel)
+            'instead of loading panel everytime, load everything then switch around em
+            'Dim generatePayroll As New GeneratePayroll(GeneratePayrollPanel)
+            'GeneratePayroll.Dock = DockStyle.Fill
+            'GeneratePayrollPanel.Controls.Add(generatePayroll)
+            'DashboardPanel.Controls.Add(HR_Dashboard)
+            'SuperMainPanel.Controls.Add(GeneratePayrollPanel)
+            'SuperMainPanel.Controls.Add(DashboardPanel)
 
 
             TblPanel.Controls.Add(sideBar, 0, 0)
-            TblPanel.Controls.Add(SuperMainPanel, 1, 0)
+            TblPanel.Controls.Add(HR_Dashboard, 1, 0)
 
 
             MainContentPanel.Controls.Add(TblPanel)
-=======
-            MainContentPanel.Controls.Add(TblPanel)
 
->>>>>>> zantua
         Else
             ' Clears both textboxes after incorrect input
             MessageBox.Show("Incorrect Employee ID / Password", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
