@@ -3,6 +3,9 @@
     Public FocusedButton As Button
     Public PreviousButton As Button
 
+    'Public FocusedPanel As New Panel
+    'Public PreviousPanel As New Panel
+
     Public Sub New(Parent As Panel)
         InitializeComponent()
         MainContentPanel = Parent
@@ -11,11 +14,16 @@
     Private Sub Sidebar_Load(sender As Object, e As EventArgs) Handles Me.Load
         FocusedButton = Btn_Dashboard
         PreviousButton = Btn_Dashboard
+
+        'FocusedPanel = DashboardPanel
+        'PreviousPanel = DashboardPanel
     End Sub
 
     Private Sub HandleButtonFocused(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click, Btn_Attendance.Click, Btn_Employees.Click, Btn_Logout.Click, Btn_Payroll.Click, Btn_Reports.Click, Btn_Requests.Click, Btn_Settings.Click
         PreviousButton = FocusedButton
         FocusedButton = CType(sender, Button)
+
+        'PreviousPanel = FocusedPanel
 
         FocusedButton.BackColor = Color.DarkSeaGreen
         If Not PreviousButton.Name = FocusedButton.Name Then
@@ -28,11 +36,11 @@
             Return
         End If
 
+        ' old
         Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
         HR_Dashboard.Dock = DockStyle.Fill
-
         TblPanel.Controls.RemoveAt(1)
-        TblPanel.Controls.Add(HR_Dashboard, 1, 0)
+        TblPanel.Controls.Add(DashboardPanel, 1, 0)
     End Sub
 
     Private Sub Btn_Payroll_Click(sender As Object, e As EventArgs) Handles Btn_Payroll.Click
@@ -40,14 +48,11 @@
             Return
         End If
 
-        PreviousButton = FocusedButton
-        FocusedButton = CType(sender, Button)
-
+        ' old
         Dim generatePayroll As New GeneratePayroll(MainContentPanel)
         generatePayroll.Dock = DockStyle.Fill
-
         TblPanel.Controls.RemoveAt(1)
-        TblPanel.Controls.Add(generatePayroll, 1, 0)
+        TblPanel.Controls.Add(GeneratePayrollPanel, 1, 0)
     End Sub
 
     Private Sub Btn_Logout_Click(sender As Object, e As EventArgs) Handles Btn_Logout.Click

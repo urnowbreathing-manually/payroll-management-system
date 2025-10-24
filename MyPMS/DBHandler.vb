@@ -6,12 +6,47 @@ Imports MySql.Data.MySqlClient
 Public Class DBHandler
     ' This class will eventually contain all mysql functions
     Public Shared currentUser() As String = {"", "", "", "", "", "", "", "", ""}
-    Private ConnectionString As String = "server=localhost;user=root;database=MyPMS;port=3306;password=;"
-    Private conn As MySqlConnection
 
+
+    ' denina connection string dont remove
+    Private ConnectionString As String = "server=localhost;user=root;database=MyPMS;port=3306;password=washer22456;"
+    'Private ConnectionString As String = "server=localhost;user=root;database=MyPMS;port=3306;password=;"
+
+
+
+    Private conn As MySqlConnection
     Public Sub New()
         conn = New MySqlConnection(ConnectionString)
     End Sub
+
+
+
+    ' for GeneratePayroll Form to retrieve all employee data
+    Public Function RetrieveAllEmployeeData(dgv As DataGridView)
+        Try
+            conn.Open()
+            Dim query As String = "SELECT * FROM employees"
+            Using cmd As New MySqlCommand(query, conn)
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    If reader.HasRows Then
+                        Dim dt As New DataTable()
+                        dt.Load(reader)
+                        dgv.DataSource = dt
+                    Else
+                        Console.WriteLine("No records found.")
+                    End If
+                End Using
+            End Using
+        Catch ex As MySqlException
+            Console.WriteLine("Error retrieving data: " & ex.Message)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+    End Function
+
+
 
     ' Method to authenticate user (unchanged)
     Public Function AuthenticateUser(EmployeeID As String, Password As String) As Boolean
@@ -45,7 +80,6 @@ Public Class DBHandler
 
         Return authenticated
     End Function
-
     'Public Function AuthenticateUser(ByVal employeeID As String, ByVal password As String)
     '    Dim authenticated As Boolean = False
 

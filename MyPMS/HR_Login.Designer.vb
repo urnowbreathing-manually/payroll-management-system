@@ -47,7 +47,7 @@ Partial Class HR_Login
         '
         Me.LoginBtn.BackColor = System.Drawing.Color.LawnGreen
         Me.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LoginBtn.Location = New System.Drawing.Point(-1, 233)
+        Me.LoginBtn.Location = New System.Drawing.Point(107, 221)
         Me.LoginBtn.Name = "LoginBtn"
         Me.LoginBtn.Size = New System.Drawing.Size(254, 62)
         Me.LoginBtn.TabIndex = 3
