@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="employeelist.Designer.vb">
+      <DependentUpon>employeelist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employeelist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GeneratePayroll.Designer.vb">
       <DependentUpon>GeneratePayroll.vb</DependentUpon>
     </Compile>
@@ -119,8 +125,17 @@
     <Compile Include="Sidebar.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="employeelist.resx">
+      <DependentUpon>employeelist.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneratePayroll.resx">
       <DependentUpon>GeneratePayroll.vb</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar.resx">
       <DependentUpon>Sidebar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -33,30 +33,33 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MainPanel.BackColor = System.Drawing.Color.Transparent
-        Me.MainPanel.Location = New System.Drawing.Point(12, 45)
+        Me.MainPanel.Location = New System.Drawing.Point(16, 55)
+        Me.MainPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(989, 560)
+        Me.MainPanel.Size = New System.Drawing.Size(1319, 689)
         Me.MainPanel.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 9)
+        Me.Button1.Location = New System.Drawing.Point(21, 11)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 25)
+        Me.Button1.Size = New System.Drawing.Size(153, 31)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1013, 617)
+        Me.ClientSize = New System.Drawing.Size(1351, 759)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MainPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MyPMS: Payroll Management System"
