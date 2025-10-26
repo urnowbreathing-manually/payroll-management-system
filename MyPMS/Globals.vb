@@ -17,7 +17,7 @@
 
 
     ' for generate payroll form hands off
-    Public Sub PopulateEmployeeFlowPanel(ByVal dgv As DataGridView, flp As FlowLayoutPanel)
+    Public Sub PopulateEmployeeFlowPanel(ByVal dgv As DataGridView, flp As FlowLayoutPanel, Optional btnText As String = "")
         flp.Controls.Clear()
 
         For Each row As DataGridViewRow In dgv.Rows
@@ -84,7 +84,7 @@
                 tblRow.Controls.Add(lblSalary, 1, 2)
 
                 Dim selectBtn As New Button()
-                selectBtn.Text = "Select"
+                selectBtn.Text = If(String.IsNullOrEmpty(btnText), "Select", btnText)
                 selectBtn.Font = New Font("Segoe UI", 9, FontStyle.Bold)
                 selectBtn.FlatStyle = FlatStyle.Flat
                 selectBtn.BackColor = Color.LightBlue

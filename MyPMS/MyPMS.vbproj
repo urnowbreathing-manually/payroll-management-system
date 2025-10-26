@@ -140,6 +140,12 @@
     <Compile Include="Sidebar.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ViewPayrollRecord.Designer.vb">
+      <DependentUpon>ViewPayrollRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPayrollRecord.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GeneratePayroll.resx">
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar.resx">
       <DependentUpon>Sidebar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPayrollRecord.resx">
+      <DependentUpon>ViewPayrollRecord.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -31,6 +31,7 @@ Partial Class Sidebar
         Me.Btn_Requests = New System.Windows.Forms.Button()
         Me.Btn_Employees = New System.Windows.Forms.Button()
         Me.Btn_Dashboard = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Guna2GradientPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,6 +40,7 @@ Partial Class Sidebar
         Me.Guna2GradientPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2GradientPanel1.Controls.Add(Me.Button1)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Attendance)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Reports)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Logout)
@@ -199,6 +201,24 @@ Partial Class Sidebar
         Me.Btn_Dashboard.Text = "Dashboard"
         Me.Btn_Dashboard.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button1.Location = New System.Drawing.Point(0, 320)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(200, 50)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "Attendance"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Sidebar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -222,4 +242,5 @@ Partial Class Sidebar
     Friend WithEvents Btn_Requests As Button
     Friend WithEvents Btn_Employees As Button
     Friend WithEvents Btn_Dashboard As Button
+    Friend WithEvents Button1 As Button
 End Class
