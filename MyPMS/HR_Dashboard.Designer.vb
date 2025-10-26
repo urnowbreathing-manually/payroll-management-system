@@ -474,10 +474,13 @@ Partial Class HR_Dashboard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
+        Me.BackgroundImage = Global.MyPMS.My.Resources.Resources.MyPMS_2_tansparent
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Controls.Add(Me.TableLayoutPanel3)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Lbl_WelcomeMsg)
+        Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(0)
         Me.Name = "HR_Dashboard"
         Me.Size = New System.Drawing.Size(850, 570)

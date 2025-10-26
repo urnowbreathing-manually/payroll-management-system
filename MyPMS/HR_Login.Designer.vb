@@ -36,7 +36,7 @@ Partial Class HR_Login
         'TestLabel
         '
         Me.TestLabel.AutoSize = True
-        Me.TestLabel.Location = New System.Drawing.Point(94, 122)
+        Me.TestLabel.Location = New System.Drawing.Point(110, 130)
         Me.TestLabel.Name = "TestLabel"
         Me.TestLabel.Size = New System.Drawing.Size(77, 13)
         Me.TestLabel.TabIndex = 0
@@ -45,14 +45,14 @@ Partial Class HR_Login
         '
         'TxtBox_EmpID
         '
-        Me.TxtBox_EmpID.Location = New System.Drawing.Point(175, 119)
+        Me.TxtBox_EmpID.Location = New System.Drawing.Point(191, 127)
         Me.TxtBox_EmpID.Name = "TxtBox_EmpID"
         Me.TxtBox_EmpID.Size = New System.Drawing.Size(143, 20)
         Me.TxtBox_EmpID.TabIndex = 1
         '
         'TxtBox_Password
         '
-        Me.TxtBox_Password.Location = New System.Drawing.Point(174, 163)
+        Me.TxtBox_Password.Location = New System.Drawing.Point(190, 157)
         Me.TxtBox_Password.Name = "TxtBox_Password"
         Me.TxtBox_Password.Size = New System.Drawing.Size(143, 20)
         Me.TxtBox_Password.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class HR_Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(108, 166)
+        Me.Label1.Location = New System.Drawing.Point(120, 160)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 4
@@ -71,7 +71,7 @@ Partial Class HR_Login
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(134, 10)
+        Me.Label2.Location = New System.Drawing.Point(150, 10)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(166, 20)
         Me.Label2.TabIndex = 5
@@ -84,7 +84,7 @@ Partial Class HR_Login
         Me.DateTodayLbl.BackColor = System.Drawing.SystemColors.Control
         Me.DateTodayLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.DateTodayLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.DateTodayLbl.Location = New System.Drawing.Point(139, 39)
+        Me.DateTodayLbl.Location = New System.Drawing.Point(150, 42)
         Me.DateTodayLbl.Name = "DateTodayLbl"
         Me.DateTodayLbl.Size = New System.Drawing.Size(158, 33)
         Me.DateTodayLbl.TabIndex = 6
@@ -97,9 +97,9 @@ Partial Class HR_Login
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.DateTodayLbl)
-        Me.Panel1.Location = New System.Drawing.Point(28, 21)
+        Me.Panel1.Location = New System.Drawing.Point(20, 20)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(425, 84)
+        Me.Panel1.Size = New System.Drawing.Size(460, 90)
         Me.Panel1.TabIndex = 7
         '
         'LoginBtn
@@ -126,7 +126,7 @@ Partial Class HR_Login
         Me.Controls.Add(Me.LoginBtn)
         Me.Controls.Add(Me.TestLabel)
         Me.Name = "HR_Login"
-        Me.Size = New System.Drawing.Size(490, 294)
+        Me.Size = New System.Drawing.Size(500, 300)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)

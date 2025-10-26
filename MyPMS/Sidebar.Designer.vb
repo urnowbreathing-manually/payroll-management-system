@@ -36,6 +36,8 @@ Partial Class Sidebar
         '
         'Panel1
         '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.LightGreen
         Me.Panel1.Controls.Add(Me.Btn_Attendance)
         Me.Panel1.Controls.Add(Me.Btn_Reports)
@@ -45,7 +47,6 @@ Partial Class Sidebar
         Me.Panel1.Controls.Add(Me.Btn_Requests)
         Me.Panel1.Controls.Add(Me.Btn_Employees)
         Me.Panel1.Controls.Add(Me.Btn_Dashboard)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"

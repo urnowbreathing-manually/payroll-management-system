@@ -1,8 +1,6 @@
 ﻿
 Imports MySql.Data.MySqlClient
 
-''﻿Imports MySql.Data.MySqlClient
-
 Public Class DBHandler
     ' This class will eventually contain all mysql functions
     Public Shared currentUser() As String = {"", "", "", "", "", "", "", "", ""}
@@ -80,20 +78,5 @@ Public Class DBHandler
 
         Return authenticated
     End Function
-    'Public Function AuthenticateUser(ByVal employeeID As String, ByVal password As String)
-    '    Dim authenticated As Boolean = False
-
-    '    For i As Integer = 0 To personnelTable.GetLength(0) - 1
-    '        If (personnelTable(i, 2) = employeeID) And (personnelTable(i, 3) = password) Then
-    '            For j As Integer = 0 To currentUser.GetLength(0) - 1
-    '                currentUser(j) = personnelTable(i, j)
-    '            Next
-    '            authenticated = True
-    '            Return authenticated
-    '        End If
-    '    Next
-
-    '    Return authenticated
-    'End Function
 
 End Class

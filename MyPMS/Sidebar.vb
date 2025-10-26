@@ -36,12 +36,9 @@
             Return
         End If
 
-        ' old
-        Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)
-        HR_Dashboard.Dock = DockStyle.Fill
+        MainForm.HREMP_Panels_Hide()
+        Pnl_HR_Dashboard.Show()
 
-        TblPanel.Controls.RemoveAt(1)
-        TblPanel.Controls.Add(HR_Dashboard, 1, 0)
     End Sub
 
     Private Sub Btn_Payroll_Click(sender As Object, e As EventArgs) Handles Btn_Payroll.Click
@@ -49,25 +46,18 @@
             Return
         End If
 
-        ' old
-        Dim generatePayroll As New GeneratePayroll(MainContentPanel)
-        generatePayroll.Dock = DockStyle.Fill
-
-        TblPanel.Controls.RemoveAt(1)
-        TblPanel.Controls.Add(generatePayroll, 1, 0)
+        MainForm.HREMP_Panels_Hide()
+        Pnl_GeneratePayroll.Show()
     End Sub
 
     Private Sub Btn_Logout_Click(sender As Object, e As EventArgs) Handles Btn_Logout.Click
-        MainContentPanel.Controls.Clear()
-
         ' Clear current user info when logging out
         DBHandler.currentUser = {"", "", "", "", ""}
 
         ' Load Login
-        Dim HR_Login As New HR_Login(MainContentPanel)
-        HR_Login.Dock = DockStyle.None
-        HR_Login.Location = New Point((MainContentPanel.Width - HR_Login.Width) \ 2, (MainContentPanel.Height - HR_Login.Height) \ 2)
-        MainContentPanel.Controls.Add(HR_Login)
+        MainForm.HREMP_Panels_Hide()
+        MainForm.Sidebar_Panel.Hide()
+        MainForm.Login_Panel.Show()
 
     End Sub
 

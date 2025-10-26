@@ -1,20 +1,24 @@
 ﻿Module Globals
 
-    Public TblPanel As New TableLayoutPanel
+    Public Pnl_HR_Dashboard As New Panel With {
+       .Location = New Point(0, 50),
+       .Margin = New Padding(0, 0, 0, 0),
+       .Padding = New Padding(0, 0, 0, 0),
+       .Size = New Size(850, 570),
+       .Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right,
+       .BackColor = Color.Transparent,
+       .BorderStyle = BorderStyle.None
+    }
 
-    ' panels for form
-    'Public DashboardPanel As New Panel With {
-    '   .Dock = DockStyle.Fill
-    '}
-
-    'Public GeneratePayrollPanel As New Panel With {
-    '   .Dock = DockStyle.Fill
-    '}
-
-    'Public SuperMainPanel As New Panel With {
-    '   .Dock = DockStyle.Fill
-    '}
-
+    Public Pnl_GeneratePayroll As New Panel With {
+       .Location = New Point(0, 50),
+       .Margin = New Padding(0, 0, 0, 0),
+       .Padding = New Padding(0, 0, 0, 0),
+       .Size = New Size(850, 570),
+       .Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right,
+       .BackColor = Color.Transparent,
+       .BorderStyle = BorderStyle.None
+    }
 
     Public Sub HandleLettersOnly(sender As Object, e As KeyPressEventArgs)
         If Char.IsDigit(e.KeyChar) And Not Asc(e.KeyChar) = 8 Then
