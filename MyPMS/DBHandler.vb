@@ -1,4 +1,5 @@
 ﻿
+Imports Guna.UI2.WinForms
 Imports MySql.Data.MySqlClient
 
 ''﻿Imports MySql.Data.MySqlClient
@@ -20,22 +21,79 @@ Public Class DBHandler
     End Sub
 
 
+
+
+
     ' hands off
     ' for GeneratePayroll Form to retrieve all employee data
-    Public Function RetrieveAllEmployeeData(dgv As DataGridView)
+    Public Function RetrieveAllEmployeeData(dgv As DataGridView, Optional filterStr As String = "", Optional filterField As String = "", Optional paidField As Boolean? = Nothing) As Boolean
         Try
             conn.Open()
+
             Dim query As String = "SELECT * FROM employee_list"
-            Using cmd As New MySqlCommand(query, conn)
-                Using reader As MySqlDataReader = cmd.ExecuteReader()
-                    If reader.HasRows Then
-                        Dim dt As New DataTable()
-                        dt.Load(reader)
-                        dgv.DataSource = dt
-                    Else
-                        Console.WriteLine("No records found.")
-                    End If
-                End Using
+            Dim conditions As New List(Of String)
+            Dim cmd As New MySqlCommand()
+
+            ' Filtering conditions
+            If Not String.IsNullOrWhiteSpace(filterStr) Then
+                If String.IsNullOrWhiteSpace(filterField) Then
+                    conditions.Add("(Name LIKE @filter OR Employee_ID LIKE @filter)")
+                    cmd.Parameters.AddWithValue("@filter", "%" & filterStr & "%")
+                Else
+                    conditions.Add(filterField & " = @filterstr")
+                    cmd.Parameters.AddWithValue("@filterstr", filterStr)
+                End If
+            End If
+
+            If paidField.HasValue Then
+                conditions.Add("paid = @paid")
+                cmd.Parameters.AddWithValue("@paid", paidField.Value)
+            End If
+
+            If conditions.Count > 0 Then
+                query &= " WHERE " & String.Join(" AND ", conditions)
+            End If
+
+            cmd.CommandText = query
+            cmd.Connection = conn
+
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                Dim dt As New DataTable()
+                dt.Load(reader)
+                dgv.DataSource = dt
+            End Using
+
+            Return True
+
+        Catch ex As MySqlException
+            Console.WriteLine("Error retrieving data: " & ex.Message)
+            Return False
+
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Function
+    Public Function RetrieveSSSContriTable(dgv As DataGridView, Optional filter As String = "")
+        Try
+            conn.Open()
+            Dim query As String = "SELECT * FROM sss_contri_table"
+            If Not filter = "" Then
+                'query &= " where @filter"
+            End If
+
+            Dim cmd As New MySqlCommand(query, conn)
+            If Not filter = "" Then
+
+            End If
+
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                If reader.HasRows Then
+                    Dim dt As New DataTable()
+                    dt.Load(reader)
+                    dgv.DataSource = dt
+                Else
+                    Console.WriteLine("No records found.")
+                End If
             End Using
         Catch ex As MySqlException
             Console.WriteLine("Error retrieving data: " & ex.Message)
@@ -45,93 +103,35 @@ Public Class DBHandler
             End If
         End Try
     End Function
-    Public Sub PopulateEmployeeFlowPanel(ByVal dgv As DataGridView, flp As FlowLayoutPanel)
-        flp.Controls.Clear()
+    Public Function UpdatePaidField(ByVal employeeID As String)
+        Dim query As String = "UPDATE employee_list SET paid = TRUE WHERE employee_id = @id"
 
-        For Each row As DataGridViewRow In dgv.Rows
-            If Not row.IsNewRow Then
-                Dim pnl As New Panel()
-                pnl.Width = flp.Width
-                pnl.Height = 90
-                pnl.Margin = New Padding(5)
-                pnl.BackColor = Color.FromArgb(240, 248, 255)
-                pnl.BorderStyle = BorderStyle.FixedSingle
-                pnl.Padding = New Padding(10, 5, 10, 5)
+        Try
+            conn.Open()
 
-                Dim layout As New TableLayoutPanel()
-                layout.ColumnCount = 2
-                layout.RowCount = 1
-                layout.Dock = DockStyle.Fill
-                layout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100))
-                layout.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 100))
+            Using cmd As New MySqlCommand(query, conn)
+                ' Add parameter to prevent SQL injection
+                cmd.Parameters.AddWithValue("@id", employeeID)
 
-                Dim tblRow As New TableLayoutPanel()
-                tblRow.ColumnCount = 2
-                tblRow.RowCount = 3
-                tblRow.Dock = DockStyle.Fill
-                tblRow.AutoSize = True
-                tblRow.Padding = New Padding(0)
-                tblRow.Margin = New Padding(0)
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
 
-                Dim lblName As New Label()
-                lblName.Text = row.Cells("Name").Value.ToString()
-                lblName.Font = New Font("Segoe UI", 12, FontStyle.Bold)
-                lblName.AutoSize = True
+                If rowsAffected > 0 Then
+                    MessageBox.Show("Payment status updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("No record found with that ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End Using
 
-                Dim lblEmpID As New Label()
-                lblEmpID.Text = "Employee ID: " & row.Cells("Employee_ID").Value.ToString()
-                lblEmpID.Font = New Font("Segoe UI", 10)
-                lblEmpID.AutoSize = True
+        Catch ex As MySqlException
+            MessageBox.Show("Database error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-                Dim lblDept As New Label()
-                lblDept.Text = "Department: " & row.Cells("Department").Value.ToString()
-                lblDept.Font = New Font("Segoe UI", 10)
-                lblDept.AutoSize = True
+        Catch ex As Exception
+            MessageBox.Show("Unexpected error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
-                Dim lblHours As New Label()
-                lblHours.Text = "Hours: " & row.Cells("TotalOfHours").Value.ToString()
-                lblHours.Font = New Font("Segoe UI", 10)
-                lblHours.AutoSize = True
-
-                Dim lblOvertime As New Label()
-                lblOvertime.Text = "Overtime: " & row.Cells("Overtime").Value.ToString()
-                lblOvertime.Font = New Font("Segoe UI", 10)
-                lblOvertime.ForeColor = Color.DarkBlue
-                lblOvertime.AutoSize = True
-
-                Dim lblSalary As New Label()
-                lblSalary.Text = "Salary: $" & Format(row.Cells("Salary").Value, "#,##0.00")
-                lblSalary.Font = New Font("Segoe UI", 10)
-                lblSalary.AutoSize = True
-
-                tblRow.Controls.Add(lblName, 0, 0)
-                tblRow.Controls.Add(lblEmpID, 0, 1)
-                tblRow.Controls.Add(lblDept, 0, 2)
-                tblRow.Controls.Add(lblHours, 1, 0)
-                tblRow.Controls.Add(lblOvertime, 1, 1)
-                tblRow.Controls.Add(lblSalary, 1, 2)
-
-                Dim selectBtn As New Button()
-                selectBtn.Text = "Select"
-                selectBtn.Font = New Font("Segoe UI", 9, FontStyle.Bold)
-                selectBtn.FlatStyle = FlatStyle.Flat
-                selectBtn.BackColor = Color.LightBlue
-                selectBtn.Size = New Size(80, 30)
-                selectBtn.Margin = New Padding(10, 25, 10, 25)
-                selectBtn.Anchor = AnchorStyles.Right
-                selectBtn.Cursor = Cursors.Hand
-                AddHandler selectBtn.Click, Sub()
-                                                MessageBox.Show(lblName.Text)
-                                            End Sub
-
-                layout.Controls.Add(tblRow, 0, 0)
-                layout.Controls.Add(selectBtn, 1, 0)
-
-                pnl.Controls.Add(layout)
-                flp.Controls.Add(pnl)
-            End If
-        Next
-    End Sub
+        Finally
+            conn.Close()
+        End Try
+    End Function
 
 
 

@@ -19,7 +19,7 @@
         'PreviousPanel = DashboardPanel
     End Sub
 
-    Private Sub HandleButtonFocused(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click, Btn_Attendance.Click, Btn_Employees.Click, Btn_Logout.Click, Btn_Payroll.Click, Btn_Reports.Click, Btn_Requests.Click, Btn_Settings.Click
+    Private Sub HandleButtonFocused(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click, Btn_Payroll.Click, Btn_Logout.Click
         PreviousButton = FocusedButton
         FocusedButton = CType(sender, Button)
 
@@ -35,16 +35,6 @@
         If FocusedButton.Name = PreviousButton.Name Then
             Return
         End If
-
-        'FocusedPanel = DashboardPanel
-
-        'For Each pnl As Panel In SuperMainPanel.Controls
-        '    If Not pnl.Name = FocusedPanel.Name Then
-        '        pnl.Visible = False
-        '    Else
-        '        pnl.Visible = True
-        '    End If
-        'Next
 
         ' old
         Dim HR_Dashboard As New HR_Dashboard(MainContentPanel)

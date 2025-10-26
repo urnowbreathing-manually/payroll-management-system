@@ -46,11 +46,12 @@
 
             TblPanel.Dock = DockStyle.Fill
             TblPanel.AutoScroll = True
+            TblPanel.Padding = New Padding(0)
 
             TblPanel.ColumnCount = 2
             TblPanel.ColumnStyles.Clear()
 
-            TblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, sideBar.Width + 5))
+            TblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, sideBar.Width + 20))
             TblPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100))
 
             TblPanel.RowCount = 1

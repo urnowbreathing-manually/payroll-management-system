@@ -52,7 +52,7 @@ Partial Class MainForm
         Me.Logo.Location = New System.Drawing.Point(0, 0)
         Me.Logo.Margin = New System.Windows.Forms.Padding(0)
         Me.Logo.Name = "Logo"
-        Me.Logo.Size = New System.Drawing.Size(145, 50)
+        Me.Logo.Size = New System.Drawing.Size(210, 50)
         Me.Logo.TabIndex = 0
         '
         'Navbar
