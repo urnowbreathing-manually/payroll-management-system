@@ -73,10 +73,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccmanagementHRA.Designer.vb">
+      <DependentUpon>AccmanagementHRA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccmanagementHRA.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="employeelist.Designer.vb">
       <DependentUpon>employeelist.vb</DependentUpon>
     </Compile>
     <Compile Include="employeelist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeStatusHRA.Designer.vb">
+      <DependentUpon>EmployeeStatusHRA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeStatusHRA.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GeneratePayroll.Designer.vb">
@@ -119,6 +131,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PayrollRecordsHRA.Designer.vb">
+      <DependentUpon>PayrollRecordsHRA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollRecordsHRA.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Sidebar.Designer.vb">
       <DependentUpon>Sidebar.vb</DependentUpon>
     </Compile>
@@ -133,8 +151,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AccmanagementHRA.resx">
+      <DependentUpon>AccmanagementHRA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employeelist.resx">
       <DependentUpon>employeelist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeStatusHRA.resx">
+      <DependentUpon>EmployeeStatusHRA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneratePayroll.resx">
       <DependentUpon>GeneratePayroll.vb</DependentUpon>
@@ -153,6 +177,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayrollRecordsHRA.resx">
+      <DependentUpon>PayrollRecordsHRA.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sidebar.resx">
       <DependentUpon>Sidebar.vb</DependentUpon>
