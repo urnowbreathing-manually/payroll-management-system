@@ -72,6 +72,7 @@ Partial Class GeneratePayroll
         Me.cmbbxFilterByDept = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         CType(Me.DGV_EmployeeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -107,6 +108,7 @@ Partial Class GeneratePayroll
         Me.Panel2.BorderRadius = 10
         Me.Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Panel2.Controls.Add(Me.lblTotalPayroll)
+        Me.Panel2.Enabled = False
         Me.Panel2.FillColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.Location = New System.Drawing.Point(910, 240)
         Me.Panel2.Name = "Panel2"
@@ -130,6 +132,7 @@ Partial Class GeneratePayroll
         Me.Panel3.BackColor = System.Drawing.Color.LightGreen
         Me.Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Panel3.Controls.Add(Me.Label12)
+        Me.Panel3.Enabled = False
         Me.Panel3.Location = New System.Drawing.Point(910, 240)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(237, 44)
@@ -152,6 +155,7 @@ Partial Class GeneratePayroll
         Me.Panel4.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Panel4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Panel4.Controls.Add(Me.Label14)
+        Me.Panel4.Enabled = False
         Me.Panel4.FillColor = System.Drawing.Color.Salmon
         Me.Panel4.Location = New System.Drawing.Point(910, 346)
         Me.Panel4.Name = "Panel4"
@@ -177,6 +181,7 @@ Partial Class GeneratePayroll
         Me.Panel5.BorderRadius = 10
         Me.Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Panel5.Controls.Add(Me.lblPendingPayroll)
+        Me.Panel5.Enabled = False
         Me.Panel5.FillColor = System.Drawing.Color.WhiteSmoke
         Me.Panel5.Location = New System.Drawing.Point(910, 346)
         Me.Panel5.Name = "Panel5"
@@ -386,6 +391,7 @@ Partial Class GeneratePayroll
         Me.txtbxDepartment.BorderRadius = 10
         Me.txtbxDepartment.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtbxDepartment.DefaultText = ""
+        Me.txtbxDepartment.Enabled = False
         Me.txtbxDepartment.Font = New System.Drawing.Font("Segoe UI Symbol", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbxDepartment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbxDepartment.Location = New System.Drawing.Point(198, 180)
@@ -532,6 +538,7 @@ Partial Class GeneratePayroll
         Me.txtbxEmailAddr.BorderRadius = 10
         Me.txtbxEmailAddr.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtbxEmailAddr.DefaultText = ""
+        Me.txtbxEmailAddr.Enabled = False
         Me.txtbxEmailAddr.Font = New System.Drawing.Font("Segoe UI Symbol", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbxEmailAddr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbxEmailAddr.Location = New System.Drawing.Point(198, 224)
@@ -624,6 +631,7 @@ Partial Class GeneratePayroll
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel2.BorderRadius = 10
+        Me.Guna2Panel2.Controls.Add(Me.Label13)
         Me.Guna2Panel2.Controls.Add(Me.FlowLayoutPanel1)
         Me.Guna2Panel2.FillColor = System.Drawing.Color.WhiteSmoke
         Me.Guna2Panel2.Location = New System.Drawing.Point(20, 450)
@@ -638,9 +646,9 @@ Partial Class GeneratePayroll
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(10, 10)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(10, 48)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(850, 258)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(818, 220)
         Me.FlowLayoutPanel1.TabIndex = 61
         '
         'Guna2Panel3
@@ -837,6 +845,18 @@ Partial Class GeneratePayroll
         Me.Label22.TabIndex = 111
         Me.Label22.Text = "Filter by department"
         '
+        'Label13
+        '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(19, 15)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(107, 21)
+        Me.Label13.TabIndex = 118
+        Me.Label13.Text = "Employee list"
+        '
         'GeneratePayroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -865,6 +885,7 @@ Partial Class GeneratePayroll
         Me.pnlPayrollForm.ResumeLayout(False)
         Me.pnlPayrollForm.PerformLayout()
         Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
         Me.Guna2Panel3.PerformLayout()
         Me.Guna2Panel4.ResumeLayout(False)
@@ -922,4 +943,5 @@ Partial Class GeneratePayroll
     Friend WithEvents Label21 As Label
     Friend WithEvents btnSearchEmployee As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtbxSearchEmployee As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label13 As Label
 End Class

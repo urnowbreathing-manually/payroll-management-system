@@ -137,16 +137,53 @@ Public Class DBHandler
 
 
     ' for view payroll record
-    Public Sub LoadPayrollData(dgv As DataGridView)
+    Public Sub LoadPayrollData(dgv As DataGridView, Optional name As String = "", Optional department As String = "", Optional salary As String = "")
         Dim query As String = " SELECT * FROM payroll_record"
+        Dim range() As String
+        Dim range1 As Decimal = 0
+        Dim range2 As Decimal = 0
+
+        If Not String.IsNullOrEmpty(department) Then
+            query &= " WHERE department = @dept"
+        ElseIf Not String.IsNullOrEmpty(name) Then
+            query &= " WHERE name like @name"
+        ElseIf Not String.IsNullOrEmpty(salary) Then
+            range = salary.Split("-"c)
+
+            For i As Integer = 0 To range.Length - 1
+                range(i) = range(i).Trim()
+            Next
+
+            If salary.Contains("Above") Then
+                range1 = Convert.ToDecimal(range(0))
+                range2 = 500000D
+            Else
+                range1 = Convert.ToDecimal(range(0))
+                range2 = Convert.ToDecimal(range(1))
+            End If
+
+            query &= " WHERE gross_salary between @range1 and @range2"
+        End If
 
         Try
             conn.Open()
             Using cmd As New MySqlCommand(query, conn)
+
+                If Not String.IsNullOrEmpty(department) Then
+                    cmd.Parameters.AddWithValue("@dept", department)
+                ElseIf Not String.IsNullOrEmpty(name) Then
+                    cmd.Parameters.AddWithValue("@name", "%" & name & "%")
+                ElseIf Not String.IsNullOrEmpty(salary) Then
+                    cmd.Parameters.AddWithValue("@range1", range1)
+                    cmd.Parameters.AddWithValue("@range2", range2)
+                End If
+
+
                 Dim da As New MySqlDataAdapter(cmd)
                 Dim dt As New DataTable()
                 da.Fill(dt)
                 dgv.DataSource = dt
+
             End Using
         Catch ex As Exception
             MessageBox.Show("Error loading payroll data: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -156,8 +193,8 @@ Public Class DBHandler
             End If
         End Try
     End Sub
-    Public Sub AddPayrollRecord(ByVal emplID As String, ByVal name As String, ByVal grossSalary As Double, ByVal sss As Double, ByVal philhealth As Double, ByVal pagibig As Double, ByVal netSalary As Double, ByVal path As String)
-        Dim query As String = "INSERT INTO payroll_record  (date_time, name, employee_id, gross_salary, sss, philhealth, pagibig, net_salary, receipt_path) VALUES (@date_time, @name, @employee_id, @gross_salary, @sss, @philhealth, @pagibig, @net_salary, @path);"
+    Public Sub AddPayrollRecord(ByVal emplID As String, ByVal name As String, ByVal grossSalary As Double, ByVal sss As Double, ByVal philhealth As Double, ByVal pagibig As Double, ByVal netSalary As Double, ByVal department As String, ByVal path As String)
+        Dim query As String = "INSERT INTO payroll_record (date_time, name, employee_id, department, gross_salary, sss, philhealth, pagibig, net_salary, receipt_path) VALUES (@date_time, @name, @employee_id, @department, @gross_salary, @sss, @philhealth, @pagibig, @net_salary, @path);"
 
         Try
             conn.Open()
@@ -165,12 +202,14 @@ Public Class DBHandler
                 cmd.Parameters.AddWithValue("@date_time", DateTime.Now)
                 cmd.Parameters.AddWithValue("@name", name)
                 cmd.Parameters.AddWithValue("@employee_id", emplID)
+                cmd.Parameters.AddWithValue("@department", department)
                 cmd.Parameters.AddWithValue("@gross_salary", grossSalary)
                 cmd.Parameters.AddWithValue("@sss", sss)
                 cmd.Parameters.AddWithValue("@philhealth", philhealth)
                 cmd.Parameters.AddWithValue("@pagibig", pagibig)
                 cmd.Parameters.AddWithValue("@net_salary", netSalary)
                 cmd.Parameters.AddWithValue("@path", path)
+
 
                 cmd.ExecuteNonQuery()
             End Using

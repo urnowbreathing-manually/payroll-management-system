@@ -23,6 +23,7 @@ Partial Class ViewPayrollRecord
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmbbxDepartment = New Guna.UI2.WinForms.Guna2ComboBox()
@@ -32,7 +33,7 @@ Partial Class ViewPayrollRecord
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtbxSearch = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel4 = New Guna.UI2.WinForms.Guna2Panel()
@@ -60,6 +61,7 @@ Partial Class ViewPayrollRecord
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 10
+        Me.Guna2Panel1.Controls.Add(Me.Label5)
         Me.Guna2Panel1.Controls.Add(Me.FlowLayoutPanel1)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
         Me.Guna2Panel1.Location = New System.Drawing.Point(25, 157)
@@ -70,6 +72,17 @@ Partial Class ViewPayrollRecord
         Me.Guna2Panel1.Size = New System.Drawing.Size(868, 518)
         Me.Guna2Panel1.TabIndex = 0
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(17, 12)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(119, 21)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Payroll records"
+        '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -77,9 +90,9 @@ Partial Class ViewPayrollRecord
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(14, 15)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(14, 47)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(839, 491)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(839, 459)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
         'Label2
@@ -102,8 +115,9 @@ Partial Class ViewPayrollRecord
         Me.cmbbxDepartment.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbbxDepartment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbbxDepartment.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbbxDepartment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmbbxDepartment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.cmbbxDepartment.ItemHeight = 30
+        Me.cmbbxDepartment.Items.AddRange(New Object() {"IT Consultant", "Accountant", "HR Employee", "Manager"})
         Me.cmbbxDepartment.Location = New System.Drawing.Point(18, 89)
         Me.cmbbxDepartment.Name = "cmbbxDepartment"
         Me.cmbbxDepartment.ShadowDecoration.BorderRadius = 4
@@ -123,8 +137,9 @@ Partial Class ViewPayrollRecord
         Me.cmbbxSalaryRange.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbbxSalaryRange.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cmbbxSalaryRange.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbbxSalaryRange.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmbbxSalaryRange.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.cmbbxSalaryRange.ItemHeight = 30
+        Me.cmbbxSalaryRange.Items.AddRange(New Object() {"0-10000", "10000-20000", "20000-30000", "30000-40000", "40000-50000", "50000-Above"})
         Me.cmbbxSalaryRange.Location = New System.Drawing.Point(18, 184)
         Me.cmbbxSalaryRange.Name = "cmbbxSalaryRange"
         Me.cmbbxSalaryRange.ShadowDecoration.BorderRadius = 4
@@ -200,6 +215,7 @@ Partial Class ViewPayrollRecord
         Me.txtbxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtbxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtbxSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtbxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxSearch.Location = New System.Drawing.Point(21, 44)
         Me.txtbxSearch.Margin = New System.Windows.Forms.Padding(4)
@@ -214,27 +230,27 @@ Partial Class ViewPayrollRecord
         Me.txtbxSearch.Size = New System.Drawing.Size(383, 37)
         Me.txtbxSearch.TabIndex = 1
         '
-        'Guna2Button1
+        'btnSearch
         '
-        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.BorderRadius = 10
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.LimeGreen
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(411, 44)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.ShadowDecoration.BorderRadius = 10
-        Me.Guna2Button1.ShadowDecoration.Color = System.Drawing.Color.DimGray
-        Me.Guna2Button1.ShadowDecoration.Depth = 8
-        Me.Guna2Button1.ShadowDecoration.Enabled = True
-        Me.Guna2Button1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 6, 6)
-        Me.Guna2Button1.Size = New System.Drawing.Size(93, 37)
-        Me.Guna2Button1.TabIndex = 2
-        Me.Guna2Button1.Text = "Search"
+        Me.btnSearch.BackColor = System.Drawing.Color.Transparent
+        Me.btnSearch.BorderRadius = 10
+        Me.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnSearch.FillColor = System.Drawing.Color.LimeGreen
+        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btnSearch.ForeColor = System.Drawing.Color.White
+        Me.btnSearch.Location = New System.Drawing.Point(411, 44)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.ShadowDecoration.BorderRadius = 10
+        Me.btnSearch.ShadowDecoration.Color = System.Drawing.Color.DimGray
+        Me.btnSearch.ShadowDecoration.Depth = 8
+        Me.btnSearch.ShadowDecoration.Enabled = True
+        Me.btnSearch.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 6, 6)
+        Me.btnSearch.Size = New System.Drawing.Size(93, 37)
+        Me.btnSearch.TabIndex = 2
+        Me.btnSearch.Text = "Search"
         '
         'Guna2Panel3
         '
@@ -242,7 +258,7 @@ Partial Class ViewPayrollRecord
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel3.BorderRadius = 10
-        Me.Guna2Panel3.Controls.Add(Me.Guna2Button1)
+        Me.Guna2Panel3.Controls.Add(Me.btnSearch)
         Me.Guna2Panel3.Controls.Add(Me.txtbxSearch)
         Me.Guna2Panel3.Controls.Add(Me.Label1)
         Me.Guna2Panel3.FillColor = System.Drawing.Color.White
@@ -257,9 +273,9 @@ Partial Class ViewPayrollRecord
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(1156, 3)
+        Me.DataGridView1.Location = New System.Drawing.Point(1143, 22)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(15, 12)
+        Me.DataGridView1.Size = New System.Drawing.Size(17, 19)
         Me.DataGridView1.TabIndex = 3
         Me.DataGridView1.Visible = False
         '
@@ -371,14 +387,15 @@ Partial Class ViewPayrollRecord
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Guna2Panel3)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Name = "ViewPayrollRecord"
         Me.Size = New System.Drawing.Size(1174, 741)
         Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
         Me.Guna2Panel2.ResumeLayout(False)
         Me.Guna2Panel2.PerformLayout()
         Me.Guna2Panel3.ResumeLayout(False)
@@ -405,7 +422,7 @@ Partial Class ViewPayrollRecord
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents txtbxSearch As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
@@ -417,4 +434,5 @@ Partial Class ViewPayrollRecord
     Friend WithEvents Label12 As Label
     Friend WithEvents Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lblTotalPayroll As Label
+    Friend WithEvents Label5 As Label
 End Class

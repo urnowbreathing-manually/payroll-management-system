@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports PdfiumViewer
 
 Public Class ViewPayrollRecord
     Public Shared MainContentPanel As Panel
@@ -13,13 +14,23 @@ Public Class ViewPayrollRecord
     Private Sub ViewPayrollRecord_Load(sender As Object, e As EventArgs) Handles Me.Load
         PayrollTable = New DataGridView
 
-        handler.LoadPayrollData(PayrollTable)
-        'MessageBox.Show("Rows in datagridview1: " & payrolltable.Rows.Count.ToString())
-        PopulatePayrollFlowPanel(PayrollTable, FlowLayoutPanel1, "View")
+        handler.LoadPayrollData(DataGridView1)
+        PopulatePayrollFlowPanel(DataGridView1, FlowLayoutPanel1, "View")
     End Sub
     Public Sub PopulatePayrollFlowPanel(ByVal dgv As DataGridView, flp As FlowLayoutPanel, Optional btnText As String = "")
         flp.Controls.Clear()
 
+        MsgBox(dgv.RowCount)
+
+        If dgv.RowCount - 1 < 1 Then
+            Dim lblNoFound As New Label()
+            lblNoFound.Text = "No employee found"
+            lblNoFound.Font = New Font("Segoe UI", 12, FontStyle.Italic)
+            lblNoFound.AutoSize = True
+
+            flp.Controls.Add(lblNoFound)
+            Return
+        End If
         For Each row As DataGridViewRow In dgv.Rows
             If Not row.IsNewRow Then
                 Dim pnl As New Panel()
@@ -111,9 +122,10 @@ Public Class ViewPayrollRecord
                 selectBtn.Margin = New Padding(10, 25, 10, 25)
                 selectBtn.Anchor = AnchorStyles.Right
                 selectBtn.Cursor = Cursors.Hand
+                selectBtn.Tag = row.Cells(10).Value.ToString
 
                 AddHandler selectBtn.Click, Sub()
-                                                MessageBox.Show("Receipt ID: " & row.Cells("receipt_id").Value.ToString())
+                                                DisplayPayrollReceipt(selectBtn.Tag)
                                             End Sub
 
                 layout.Controls.Add(tblRow, 0, 0)
@@ -125,7 +137,66 @@ Public Class ViewPayrollRecord
             End If
         Next
     End Sub
+    ' display pdf receipt
+    Private Sub DisplayPayrollReceipt(ByVal path As String)
+        If String.IsNullOrEmpty(path) Then Return
+        Dim receipt As New PdfViewer
+        MsgBox(path)
+
+
+        Dim receiptForm As New Form
+        receiptForm.Size = New System.Drawing.Size(500, 800)
+
+
+        Try
+            receipt.Document = PdfDocument.Load(path)
+            receipt.Dock = DockStyle.Fill
+            receiptForm.Controls.Add(receipt)
+            receiptForm.ShowDialog()
+
+        Catch ex As Exception
+            MsgBox("Failed to load pdf receipt file: " & ex.Message.ToString, MsgBoxStyle.Critical, "Error")
+        End Try
+
+    End Sub
 
 
 
+
+
+
+
+    ' buttons & cmbobox
+    Private Sub FilterDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbbxDepartment.SelectedIndexChanged
+        If String.IsNullOrEmpty(cmbbxDepartment.Text) Then
+            Return
+        End If
+
+        FlowLayoutPanel1.Controls.Clear()
+        DataGridView1.DataSource = Nothing
+
+        handler.LoadPayrollData(DataGridView1, "", cmbbxDepartment.Text.Replace(" ", "_"))
+        PopulatePayrollFlowPanel(DataGridView1, FlowLayoutPanel1, "View")
+    End Sub
+    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        'If String.IsNullOrWhiteSpace(txtbxSearch.Text) Then Return
+
+        FlowLayoutPanel1.Controls.Clear()
+        DataGridView1.DataSource = Nothing
+
+        handler.LoadPayrollData(DataGridView1, txtbxSearch.Text)
+        PopulatePayrollFlowPanel(DataGridView1, FlowLayoutPanel1, "View")
+
+    End Sub
+    Private Sub SalaryRange_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbbxSalaryRange.SelectedIndexChanged
+        If String.IsNullOrEmpty(cmbbxSalaryRange.Text) Then
+            Return
+        End If
+
+        FlowLayoutPanel1.Controls.Clear()
+        DataGridView1.DataSource = Nothing
+
+        handler.LoadPayrollData(DataGridView1, "", "", cmbbxSalaryRange.Text)
+        PopulatePayrollFlowPanel(DataGridView1, FlowLayoutPanel1, "View")
+    End Sub
 End Class

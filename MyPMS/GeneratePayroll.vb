@@ -303,10 +303,19 @@ Public Class GeneratePayroll
         End If
 
         txtbxNetSalary.Text = CalculateNetSalary().ToString
+        Dim empID As String = txtbxEmployeeID.Text
+        Dim empName As String = txtbxEmployeeName.Text
+        Dim grossSalary As String = txtbxGrossSalary.Text
+        Dim sss As String = txtbxSSS.Text
+        Dim philHealth As String = txtbxPhilHealth.Text
+        Dim pagibig As String = txtbxPagIBIG.Text
+        Dim netSalary As String = txtbxNetSalary.Text
+        Dim dept As String = txtbxDepartment.Text
+
         Dim resultPath As String = CreateReceiptPDF()
         If Not String.IsNullOrEmpty(resultPath) Then
             dbHandler.UpdatePaidField(txtbxEmployeeID.Text)
-            dbHandler.AddPayrollRecord(txtbxEmployeeID.Text, txtbxEmployeeName.Text, txtbxGrossSalary.Text, txtbxSSS.Text, txtbxPhilHealth.Text, txtbxPagIBIG.Text, txtbxNetSalary.Text, resultPath)
+            dbHandler.AddPayrollRecord(empID, empName, grossSalary, sss, philHealth, pagibig, netSalary, dept, resultPath)
         End If
     End Sub
     Private Sub FilterByDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbbxFilterByDept.SelectedIndexChanged
