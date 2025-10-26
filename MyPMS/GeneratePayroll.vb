@@ -6,17 +6,13 @@ Imports MySql.Data.MySqlClient
 Imports PdfSharp.Drawing
 Imports PdfSharp.Pdf
 Imports TheArtOfDevHtmlRenderer.Adapters
-
+' mint green
+' light green
+' dark sea green
 Public Class GeneratePayroll
     Public Shared MainContentPanel As Panel
     Dim dbHandler As DBHandler
     Dim SSSContriTable As New DataGridView
-
-    ' mint green
-    ' light green
-    ' dark sea green
-
-
 
     'functions & form events
     Public Sub New(Parent As Panel)
@@ -194,6 +190,14 @@ Public Class GeneratePayroll
 
         Return (grossSalary - (sss + philhealth + pagIbig))
     End Function
+
+
+
+
+
+
+
+    ' create pdf function
     Private Function CreateReceiptPDF() As String
         Dim receipt As New PdfDocument()
         Dim page As PdfPage = receipt.AddPage()
@@ -269,6 +273,8 @@ Public Class GeneratePayroll
 
 
 
+
+
     ' controls handlers
     Private Sub SearchEmployee_Button(sender As Object, e As EventArgs) Handles btnSearchEmployee.Click
         If String.IsNullOrEmpty(txtbxSearchEmployee.Text) Then
@@ -297,8 +303,10 @@ Public Class GeneratePayroll
         End If
 
         txtbxNetSalary.Text = CalculateNetSalary().ToString
-        If Not String.IsNullOrEmpty(CreateReceiptPDF()) Then
+        Dim resultPath As String = CreateReceiptPDF()
+        If Not String.IsNullOrEmpty(resultPath) Then
             dbHandler.UpdatePaidField(txtbxEmployeeID.Text)
+            dbHandler.AddPayrollRecord(txtbxEmployeeID.Text, txtbxEmployeeName.Text, txtbxGrossSalary.Text, txtbxSSS.Text, txtbxPhilHealth.Text, txtbxPagIBIG.Text, txtbxNetSalary.Text, resultPath)
         End If
     End Sub
     Private Sub FilterByDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbbxFilterByDept.SelectedIndexChanged
