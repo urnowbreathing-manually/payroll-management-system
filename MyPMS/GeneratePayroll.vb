@@ -8,7 +8,7 @@ Imports PdfSharp.Pdf
 Imports TheArtOfDevHtmlRenderer.Adapters
 ' mint green
 ' light green
-' dark sea green
+' dark sea green wa
 Public Class GeneratePayroll
     Public Shared MainContentPanel As Panel
     Dim dbHandler As DBHandler
