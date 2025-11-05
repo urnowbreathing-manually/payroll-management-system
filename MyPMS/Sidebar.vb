@@ -19,7 +19,7 @@
         'PreviousPanel = DashboardPanel
     End Sub
 
-    Private Sub HandleButtonFocused(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click, Btn_Payroll.Click, Btn_Logout.Click, Button1.Click
+    Private Sub HandleButtonFocused(sender As Object, e As EventArgs) Handles Btn_Employees.Click, Btn_Dashboard.Click, Btn_Payroll.Click, Btn_Logout.Click, btnViewPayroll.Click
         PreviousButton = FocusedButton
         FocusedButton = CType(sender, Button)
 
@@ -71,7 +71,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnViewPayroll.Click
         If FocusedButton.Name = PreviousButton.Name Then
             Return
         End If
@@ -82,5 +82,18 @@
 
         TblPanel.Controls.RemoveAt(1)
         TblPanel.Controls.Add(viewPayrollRecord, 1, 0)
+    End Sub
+
+    Private Sub Btn_Employees_Click(sender As Object, e As EventArgs) Handles Btn_Employees.Click
+        If FocusedButton.Name = PreviousButton.Name Then
+            Return
+        End If
+
+        ' old
+        Dim employee_list As New employeelist(MainContentPanel)
+        employee_list.Dock = DockStyle.Fill
+
+        TblPanel.Controls.RemoveAt(1)
+        TblPanel.Controls.Add(employee_list, 1, 0)
     End Sub
 End Class

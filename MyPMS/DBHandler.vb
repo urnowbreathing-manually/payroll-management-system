@@ -19,14 +19,71 @@ Public Class DBHandler
 
 
 
-
+    '======== denina part start (forms: generate payroll, view payroll record, employee list) ========
 
     ' hands off
-    ' for GeneratePayroll Form to retrieve all employee data
-    Public Function RetrieveAllEmployeeData(dgv As DataGridView, Optional filterStr As String = "", Optional filterField As String = "", Optional paidField As Boolean? = Nothing) As Boolean
+    Public Function RetrieveDepartments(cmb As ComboBox) As Boolean
         Try
             conn.Open()
 
+            'Dim query As String = "SELECT Employee_ID , Name, Department, TotalOfHours, Overtime, Paid, Salary FROM employee_list"
+            Dim query As String = "SELECT * FROM department_types"
+            Dim conditions As New List(Of String)
+            Dim cmd As New MySqlCommand(query, conn)
+
+            Dim Reader = cmd.ExecuteReader
+
+            While Reader.Read()
+                'If Not IsDBNull(Reader("name")) Then cmb.Items.Add(Reader("name"))
+                cmb.Items.Add(Reader("name"))
+            End While
+
+            Return True
+
+        Catch ex As MySqlException
+            Console.WriteLine("Error retrieving departments: " & ex.Message)
+            Return False
+
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Function
+    Public Function GetNewIDValue() As Integer
+        Try
+            conn.Open()
+
+            Dim query As String = "SELECT MAX(ID) AS `MAX` FROM employee_list"
+            Dim conditions As New List(Of String)
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim maxId = 0
+
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                If reader.Read() Then
+                    If Not reader.IsDBNull(0) Then
+                        maxId = reader.GetInt32(0)
+                    End If
+                End If
+            End Using
+
+            Return maxId
+
+        Catch ex As MySqlException
+            Console.WriteLine("Error retrieving new ID: " & ex.Message)
+            Return False
+
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Function
+
+
+    ' for GeneratePayroll Form to retrieve all employee data
+    Public Function RetrieveAllEmployeeData(dgv As DataGridView, Optional filterStr As String = "", Optional filterField As String = "", Optional paidField As Boolean? = Nothing) As Boolean
+        Try
+            dgv.DataSource = Nothing
+            conn.Open()
+
+            'Dim query As String = "SELECT Employee_ID , Name, Department, TotalOfHours, Overtime, Paid, Salary FROM employee_list"
             Dim query As String = "SELECT * FROM employee_list"
             Dim conditions As New List(Of String)
             Dim cmd As New MySqlCommand()
@@ -58,6 +115,57 @@ Public Class DBHandler
                 Dim dt As New DataTable()
                 dt.Load(reader)
                 dgv.DataSource = dt
+                'dgv.Columns.Remove("Paid")
+            End Using
+
+            Return True
+
+        Catch ex As MySqlException
+            Console.WriteLine("Error retrieving data: " & ex.Message)
+            Return False
+
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+    End Function
+    Public Function RetrieveAllArchiveEmployeeData(dgv As DataGridView, Optional filterStr As String = "", Optional filterField As String = "", Optional paidField As Boolean? = Nothing) As Boolean
+        Try
+            dgv.DataSource = Nothing
+            conn.Open()
+
+            'Dim query As String = "SELECT Employee_ID , Name, Department, TotalOfHours, Overtime, Paid, Salary FROM employee_list"
+            Dim query As String = "SELECT * FROM employee_archive"
+            Dim conditions As New List(Of String)
+            Dim cmd As New MySqlCommand()
+
+            ' Filtering conditions
+            If Not String.IsNullOrWhiteSpace(filterStr) Then
+                If String.IsNullOrWhiteSpace(filterField) Then
+                    conditions.Add("(Name LIKE @filter OR Employee_ID LIKE @filter)")
+                    cmd.Parameters.AddWithValue("@filter", "%" & filterStr & "%")
+                Else
+                    conditions.Add(filterField & " = @filterstr")
+                    cmd.Parameters.AddWithValue("@filterstr", filterStr)
+                End If
+            End If
+
+            If paidField.HasValue Then
+                conditions.Add("paid = @paid")
+                cmd.Parameters.AddWithValue("@paid", paidField.Value)
+            End If
+
+            If conditions.Count > 0 Then
+                query &= " WHERE " & String.Join(" AND ", conditions)
+            End If
+
+            cmd.CommandText = query
+            cmd.Connection = conn
+
+            Using reader As MySqlDataReader = cmd.ExecuteReader()
+                Dim dt As New DataTable()
+                dt.Load(reader)
+                dgv.DataSource = dt
+                'dgv.Columns.Remove("Paid")
             End Using
 
             Return True
@@ -131,14 +239,10 @@ Public Class DBHandler
     End Function
 
 
-
-
-
-
-
     ' for view payroll record
     Public Sub LoadPayrollData(dgv As DataGridView, Optional name As String = "", Optional department As String = "", Optional salary As String = "")
         Dim query As String = " SELECT * FROM payroll_record"
+
         Dim range() As String
         Dim range1 As Decimal = 0
         Dim range2 As Decimal = 0
@@ -223,6 +327,136 @@ Public Class DBHandler
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
     End Sub
+
+
+    'for employee list form
+    Public Function AddNewEmployee(Employee_ID As Integer,
+                                   Name As String,
+                                   Department As String,
+                                   EmailAddress As String,
+                                   BirthDate As Date,
+                                   ContactNo As String,
+                                   Salary As Decimal,
+                                   HireDate As Date) As Boolean
+        Dim query As String = "INSERT INTO employee_list (Employee_ID, Name, Department, EmailAddress, BirthDate, ContactNo, Salary, HireDate) " &
+                              "VALUES (@Employee_ID, @Name, @Department, @EmailAddress, @BirthDate, @ContactNo, @Salary, @HireDate);"
+
+        Try
+            Using conn As New MySqlConnection(ConnectionString)
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@Employee_ID", Employee_ID)
+                    cmd.Parameters.AddWithValue("@Name", Name)
+                    cmd.Parameters.AddWithValue("@Department", Department)
+                    cmd.Parameters.AddWithValue("@EmailAddress", EmailAddress)
+                    cmd.Parameters.AddWithValue("@BirthDate", BirthDate)
+                    cmd.Parameters.AddWithValue("@ContactNo", ContactNo)
+                    cmd.Parameters.AddWithValue("@Salary", Salary)
+                    cmd.Parameters.AddWithValue("@HireDate", HireDate)
+
+                    conn.Open()
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+                    Return rowsAffected > 0
+                End Using
+            End Using
+
+        Catch ex As MySqlException
+            MessageBox.Show("Database error: " & ex.Message)
+            Return False
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            Return False
+        End Try
+    End Function
+    Public Function UpdateEmployee(Employee_ID As String,
+                                   Name As String,
+                                   Department As String,
+                                   EmailAddress As String,
+                                   BirthDate As Date,
+                                   ContactNo As String,
+                                   Salary As Decimal,
+                                   HireDate As Date) As Boolean
+
+        Dim query As String = "UPDATE employee_list SET " &
+                              "Name = @Name, " &
+                              "Department = @Department, " &
+                              "EmailAddress = @EmailAddress, " &
+                              "BirthDate = @BirthDate, " &
+                              "ContactNo = @ContactNo, " &
+                              "Salary = @Salary, " &
+                              "HireDate = @HireDate " &
+                              "WHERE Employee_ID = @Employee_ID;"
+
+        Try
+            Using conn As New MySqlConnection(ConnectionString)
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@Employee_ID", Employee_ID)
+                    cmd.Parameters.AddWithValue("@Name", Name)
+                    cmd.Parameters.AddWithValue("@Department", Department)
+                    cmd.Parameters.AddWithValue("@EmailAddress", EmailAddress)
+                    cmd.Parameters.AddWithValue("@BirthDate", BirthDate)
+                    cmd.Parameters.AddWithValue("@ContactNo", ContactNo)
+                    cmd.Parameters.AddWithValue("@Salary", Salary)
+                    cmd.Parameters.AddWithValue("@HireDate", HireDate)
+
+                    conn.Open()
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+                    Return rowsAffected > 0
+                End Using
+            End Using
+
+        Catch ex As MySqlException
+            MessageBox.Show("Database error: " & ex.Message)
+            Return False
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            Return False
+        End Try
+    End Function
+    Public Function MoveEmployeeToArchive(Employee_ID As String) As Boolean
+        Dim insertQuery As String = "INSERT INTO employee_archive (Employee_ID, Name, Department, EmailAddress, BirthDate, ContactNo, Salary, HireDate) " &
+                                    "SELECT Employee_ID, Name, Department, EmailAddress, BirthDate, ContactNo, Salary, HireDate " &
+                                    "FROM employee_list WHERE Employee_ID = @Employee_ID;"
+
+        Dim deleteQuery As String = "DELETE FROM employee_list WHERE Employee_ID = @Employee_ID;"
+
+        Try
+            Using conn As New MySqlConnection(ConnectionString)
+                conn.Open()
+
+                Using transaction As MySqlTransaction = conn.BeginTransaction()
+                    Using insertCmd As New MySqlCommand(insertQuery, conn, transaction)
+                        insertCmd.Parameters.AddWithValue("@Employee_ID", Employee_ID)
+                        Dim insertedRows As Integer = insertCmd.ExecuteNonQuery()
+
+                        If insertedRows = 0 Then
+                            transaction.Rollback()
+                            Return False
+                        End If
+                    End Using
+
+                    Using deleteCmd As New MySqlCommand(deleteQuery, conn, transaction)
+                        deleteCmd.Parameters.AddWithValue("@Employee_ID", Employee_ID)
+                        deleteCmd.ExecuteNonQuery()
+                    End Using
+
+                    transaction.Commit()
+                    Return True
+                End Using
+            End Using
+
+        Catch ex As MySqlException
+            MessageBox.Show("Database error: " & ex.Message)
+            Return False
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            Return False
+        End Try
+    End Function
+
+    ' ======== denina part end (forms: generate payroll, view payroll record, employee list) ========
+
 
 
 

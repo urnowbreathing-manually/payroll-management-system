@@ -86,6 +86,9 @@
       <HintPath>..\packages\System.Drawing.Common.9.0.10\lib\net462\System.Drawing.Common.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -108,7 +111,25 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccmanagementHRA.Designer.vb">
+      <DependentUpon>AccmanagementHRA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccmanagementHRA.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="DBHandler.vb" />
+    <Compile Include="employeelist.Designer.vb">
+      <DependentUpon>employeelist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="employeelist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeStatusHRA.Designer.vb">
+      <DependentUpon>EmployeeStatusHRA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeStatusHRA.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GeneratePayroll.Designer.vb">
       <DependentUpon>GeneratePayroll.vb</DependentUpon>
     </Compile>
@@ -164,6 +185,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AccmanagementHRA.resx">
+      <DependentUpon>AccmanagementHRA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeelist.resx">
+      <DependentUpon>employeelist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeStatusHRA.resx">
+      <DependentUpon>EmployeeStatusHRA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneratePayroll.resx">
       <DependentUpon>GeneratePayroll.vb</DependentUpon>
     </EmbeddedResource>
