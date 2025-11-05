@@ -123,11 +123,11 @@ Partial Class HR_Dashboard
         Me.Lbl_PayrollP_Dynamic.AutoSize = True
         Me.Lbl_PayrollP_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_PayrollP_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Lbl_PayrollP_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Lbl_PayrollP_Dynamic.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_PayrollP_Dynamic.Location = New System.Drawing.Point(83, 50)
         Me.Lbl_PayrollP_Dynamic.Margin = New System.Windows.Forms.Padding(0)
         Me.Lbl_PayrollP_Dynamic.Name = "Lbl_PayrollP_Dynamic"
-        Me.Lbl_PayrollP_Dynamic.Size = New System.Drawing.Size(32, 33)
+        Me.Lbl_PayrollP_Dynamic.Size = New System.Drawing.Size(22, 23)
         Me.Lbl_PayrollP_Dynamic.TabIndex = 5
         Me.Lbl_PayrollP_Dynamic.Text = "0"
         '
@@ -137,11 +137,11 @@ Partial Class HR_Dashboard
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(33, 10)
         Me.Label3.Margin = New System.Windows.Forms.Padding(0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(132, 19)
+        Me.Label3.Size = New System.Drawing.Size(143, 23)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Pending Payrolls"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -165,11 +165,11 @@ Partial Class HR_Dashboard
         Me.Lbl_EmpCA_Dynamic.AutoSize = True
         Me.Lbl_EmpCA_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_EmpCA_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Lbl_EmpCA_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Lbl_EmpCA_Dynamic.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_EmpCA_Dynamic.Location = New System.Drawing.Point(80, 50)
         Me.Lbl_EmpCA_Dynamic.Margin = New System.Windows.Forms.Padding(0)
         Me.Lbl_EmpCA_Dynamic.Name = "Lbl_EmpCA_Dynamic"
-        Me.Lbl_EmpCA_Dynamic.Size = New System.Drawing.Size(32, 33)
+        Me.Lbl_EmpCA_Dynamic.Size = New System.Drawing.Size(22, 23)
         Me.Lbl_EmpCA_Dynamic.TabIndex = 4
         Me.Lbl_EmpCA_Dynamic.Text = "0"
         '
@@ -179,11 +179,11 @@ Partial Class HR_Dashboard
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(0, 10)
         Me.Label2.Margin = New System.Windows.Forms.Padding(0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(196, 19)
+        Me.Label2.Size = New System.Drawing.Size(214, 23)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Current Active Employees"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -207,11 +207,11 @@ Partial Class HR_Dashboard
         Me.Lbl_TotalEmp_Dynamic.AutoSize = True
         Me.Lbl_TotalEmp_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_TotalEmp_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Lbl_TotalEmp_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Lbl_TotalEmp_Dynamic.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_TotalEmp_Dynamic.Location = New System.Drawing.Point(80, 50)
         Me.Lbl_TotalEmp_Dynamic.Margin = New System.Windows.Forms.Padding(0)
         Me.Lbl_TotalEmp_Dynamic.Name = "Lbl_TotalEmp_Dynamic"
-        Me.Lbl_TotalEmp_Dynamic.Size = New System.Drawing.Size(32, 33)
+        Me.Lbl_TotalEmp_Dynamic.Size = New System.Drawing.Size(22, 23)
         Me.Lbl_TotalEmp_Dynamic.TabIndex = 3
         Me.Lbl_TotalEmp_Dynamic.Text = "0"
         '
@@ -221,13 +221,13 @@ Partial Class HR_Dashboard
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(30, 10)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(18, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 19)
+        Me.Label1.Size = New System.Drawing.Size(162, 23)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Total Employees"
+        Me.Label1.Text = "TOTAL EMPLOYEES"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel4
@@ -249,11 +249,11 @@ Partial Class HR_Dashboard
         Me.Lbl_PayrollTM_Dynamic.AutoSize = True
         Me.Lbl_PayrollTM_Dynamic.BackColor = System.Drawing.Color.White
         Me.Lbl_PayrollTM_Dynamic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Lbl_PayrollTM_Dynamic.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Lbl_PayrollTM_Dynamic.Location = New System.Drawing.Point(33, 50)
+        Me.Lbl_PayrollTM_Dynamic.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Lbl_PayrollTM_Dynamic.Location = New System.Drawing.Point(59, 50)
         Me.Lbl_PayrollTM_Dynamic.Margin = New System.Windows.Forms.Padding(0)
         Me.Lbl_PayrollTM_Dynamic.Name = "Lbl_PayrollTM_Dynamic"
-        Me.Lbl_PayrollTM_Dynamic.Size = New System.Drawing.Size(132, 33)
+        Me.Lbl_PayrollTM_Dynamic.Size = New System.Drawing.Size(81, 23)
         Me.Lbl_PayrollTM_Dynamic.TabIndex = 6
         Me.Lbl_PayrollTM_Dynamic.Text = "Php 0.00"
         '
@@ -263,13 +263,13 @@ Partial Class HR_Dashboard
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(3, 10)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Black", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(14, 16)
         Me.Label4.Margin = New System.Windows.Forms.Padding(0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(187, 19)
+        Me.Label4.Size = New System.Drawing.Size(174, 15)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Total Payroll This Month"
+        Me.Label4.Text = "TOTAL PAYROLL THIS MONTH"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TableLayoutPanel2
@@ -307,11 +307,11 @@ Partial Class HR_Dashboard
         Me.Lbl_OnLeave.AutoSize = True
         Me.Lbl_OnLeave.BackColor = System.Drawing.Color.White
         Me.Lbl_OnLeave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Lbl_OnLeave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_OnLeave.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_OnLeave.Location = New System.Drawing.Point(50, 10)
         Me.Lbl_OnLeave.Margin = New System.Windows.Forms.Padding(0)
         Me.Lbl_OnLeave.Name = "Lbl_OnLeave"
-        Me.Lbl_OnLeave.Size = New System.Drawing.Size(140, 22)
+        Me.Lbl_OnLeave.Size = New System.Drawing.Size(135, 23)
         Me.Lbl_OnLeave.TabIndex = 2
         Me.Lbl_OnLeave.Text = "On Leave Today"
         '
@@ -333,11 +333,11 @@ Partial Class HR_Dashboard
         Me.Lbl_OnOvertime.AutoSize = True
         Me.Lbl_OnOvertime.BackColor = System.Drawing.Color.White
         Me.Lbl_OnOvertime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Lbl_OnOvertime.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_OnOvertime.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Lbl_OnOvertime.Location = New System.Drawing.Point(41, 10)
         Me.Lbl_OnOvertime.Margin = New System.Windows.Forms.Padding(0)
         Me.Lbl_OnOvertime.Name = "Lbl_OnOvertime"
-        Me.Lbl_OnOvertime.Size = New System.Drawing.Size(163, 22)
+        Me.Lbl_OnOvertime.Size = New System.Drawing.Size(163, 23)
         Me.Lbl_OnOvertime.TabIndex = 3
         Me.Lbl_OnOvertime.Text = "On Overtime Today"
         '

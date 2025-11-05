@@ -36,9 +36,10 @@ Partial Class HR_Login
         'TestLabel
         '
         Me.TestLabel.AutoSize = True
-        Me.TestLabel.Location = New System.Drawing.Point(110, 130)
+        Me.TestLabel.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TestLabel.Location = New System.Drawing.Point(75, 124)
         Me.TestLabel.Name = "TestLabel"
-        Me.TestLabel.Size = New System.Drawing.Size(77, 13)
+        Me.TestLabel.Size = New System.Drawing.Size(110, 21)
         Me.TestLabel.TabIndex = 0
         Me.TestLabel.Text = "Employee ID* :"
         Me.TestLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -60,9 +61,10 @@ Partial Class HR_Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(120, 160)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semilight", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.Label1.Location = New System.Drawing.Point(96, 157)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 13)
+        Me.Label1.Size = New System.Drawing.Size(89, 21)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Password* :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -70,30 +72,30 @@ Partial Class HR_Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(150, 10)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(107, 11)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(166, 20)
+        Me.Label2.Size = New System.Drawing.Size(242, 30)
         Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Date && Time Today:"
+        Me.Label2.Text = "DATE && TIME TODAY"
         '
         'DateTodayLbl
         '
         Me.DateTodayLbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateTodayLbl.AutoSize = True
         Me.DateTodayLbl.BackColor = System.Drawing.SystemColors.Control
-        Me.DateTodayLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.DateTodayLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.DateTodayLbl.Location = New System.Drawing.Point(150, 42)
+        Me.DateTodayLbl.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.DateTodayLbl.Location = New System.Drawing.Point(170, 41)
         Me.DateTodayLbl.Name = "DateTodayLbl"
-        Me.DateTodayLbl.Size = New System.Drawing.Size(158, 33)
+        Me.DateTodayLbl.Size = New System.Drawing.Size(113, 21)
         Me.DateTodayLbl.TabIndex = 6
-        Me.DateTodayLbl.Text = "Date today"
+        Me.DateTodayLbl.Text = "DATE TODAY"
         Me.DateTodayLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.SeaGreen
+        Me.Panel1.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.DateTodayLbl)
@@ -104,13 +106,15 @@ Partial Class HR_Login
         '
         'LoginBtn
         '
-        Me.LoginBtn.BackColor = System.Drawing.Color.LawnGreen
+        Me.LoginBtn.BackColor = System.Drawing.Color.Green
         Me.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LoginBtn.Location = New System.Drawing.Point(120, 220)
+        Me.LoginBtn.Font = New System.Drawing.Font("Segoe UI Black", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.LoginBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.LoginBtn.Location = New System.Drawing.Point(120, 217)
         Me.LoginBtn.Name = "LoginBtn"
         Me.LoginBtn.Size = New System.Drawing.Size(250, 60)
         Me.LoginBtn.TabIndex = 3
-        Me.LoginBtn.Text = "Login"
+        Me.LoginBtn.Text = "LOGIN"
         Me.LoginBtn.UseVisualStyleBackColor = False
         '
         'HR_Login

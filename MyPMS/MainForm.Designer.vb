@@ -30,13 +30,14 @@ Partial Class MainForm
         Me.Login_Panel = New System.Windows.Forms.Panel()
         Me.BG_Logo_Panel = New System.Windows.Forms.Panel()
         Me.Navbar.SuspendLayout()
+        Me.BG_Logo_Panel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Navbar
         '
         Me.Navbar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Navbar.BackColor = System.Drawing.Color.LightGreen
+        Me.Navbar.BackColor = System.Drawing.Color.Honeydew
         Me.Navbar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Navbar.Controls.Add(Me.Btn_Show_Sidebar)
         Me.Navbar.Controls.Add(Me.Navbar_Header)
@@ -48,7 +49,7 @@ Partial Class MainForm
         '
         'Btn_Show_Sidebar
         '
-        Me.Btn_Show_Sidebar.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Btn_Show_Sidebar.BackColor = System.Drawing.Color.MintCream
         Me.Btn_Show_Sidebar.BackgroundImage = Global.MyPMS.My.Resources.Resources.MyPMS_6_transparent
         Me.Btn_Show_Sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Btn_Show_Sidebar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine
@@ -64,18 +65,18 @@ Partial Class MainForm
         Me.Navbar_Header.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Navbar_Header.AutoSize = True
         Me.Navbar_Header.BackColor = System.Drawing.Color.Transparent
-        Me.Navbar_Header.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Navbar_Header.Location = New System.Drawing.Point(390, 10)
+        Me.Navbar_Header.Font = New System.Drawing.Font("Segoe UI Black", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Navbar_Header.Location = New System.Drawing.Point(438, 9)
         Me.Navbar_Header.Name = "Navbar_Header"
-        Me.Navbar_Header.Size = New System.Drawing.Size(71, 31)
+        Me.Navbar_Header.Size = New System.Drawing.Size(85, 37)
         Me.Navbar_Header.TabIndex = 1
-        Me.Navbar_Header.Text = "Text"
+        Me.Navbar_Header.Text = "TEXT"
         '
         'Sidebar_Panel
         '
         Me.Sidebar_Panel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Sidebar_Panel.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Sidebar_Panel.BackColor = System.Drawing.Color.LightGreen
         Me.Sidebar_Panel.Location = New System.Drawing.Point(0, 50)
         Me.Sidebar_Panel.Margin = New System.Windows.Forms.Padding(0)
         Me.Sidebar_Panel.Name = "Sidebar_Panel"
@@ -85,8 +86,8 @@ Partial Class MainForm
         'Login_Panel
         '
         Me.Login_Panel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Login_Panel.BackColor = System.Drawing.Color.MediumAquamarine
-        Me.Login_Panel.Location = New System.Drawing.Point(175, 185)
+        Me.Login_Panel.BackColor = System.Drawing.Color.PaleGreen
+        Me.Login_Panel.Location = New System.Drawing.Point(235, 126)
         Me.Login_Panel.Margin = New System.Windows.Forms.Padding(0)
         Me.Login_Panel.Name = "Login_Panel"
         Me.Login_Panel.Size = New System.Drawing.Size(500, 300)
@@ -100,6 +101,7 @@ Partial Class MainForm
         Me.BG_Logo_Panel.BackColor = System.Drawing.Color.Transparent
         Me.BG_Logo_Panel.BackgroundImage = Global.MyPMS.My.Resources.Resources.MyPMS_2_tansparent
         Me.BG_Logo_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BG_Logo_Panel.Controls.Add(Me.Login_Panel)
         Me.BG_Logo_Panel.Location = New System.Drawing.Point(0, 50)
         Me.BG_Logo_Panel.Margin = New System.Windows.Forms.Padding(0)
         Me.BG_Logo_Panel.Name = "BG_Logo_Panel"
@@ -113,7 +115,6 @@ Partial Class MainForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(850, 620)
-        Me.Controls.Add(Me.Login_Panel)
         Me.Controls.Add(Me.Sidebar_Panel)
         Me.Controls.Add(Me.Navbar)
         Me.Controls.Add(Me.BG_Logo_Panel)
@@ -123,6 +124,7 @@ Partial Class MainForm
         Me.Text = "MyPMS: Payroll Management System"
         Me.Navbar.ResumeLayout(False)
         Me.Navbar.PerformLayout()
+        Me.BG_Logo_Panel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

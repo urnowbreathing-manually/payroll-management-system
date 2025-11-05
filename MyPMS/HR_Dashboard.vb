@@ -27,5 +27,7 @@
 
     End Sub
 
+    Private Sub Lbl_PayrollTM_Dynamic_Click(sender As Object, e As EventArgs) Handles Lbl_PayrollTM_Dynamic.Click
 
+    End Sub
 End Class

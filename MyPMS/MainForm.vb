@@ -54,5 +54,7 @@
 
     End Sub
 
+    Private Sub Navbar_Header_Click(sender As Object, e As EventArgs) Handles Navbar_Header.Click
 
+    End Sub
 End Class

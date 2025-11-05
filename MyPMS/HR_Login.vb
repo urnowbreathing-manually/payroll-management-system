@@ -49,5 +49,7 @@
 
     End Sub
 
+    Private Sub DateTodayLbl_Click(sender As Object, e As EventArgs) Handles DateTodayLbl.Click
 
+    End Sub
 End Class
