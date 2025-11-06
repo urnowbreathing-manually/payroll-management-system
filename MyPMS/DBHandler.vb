@@ -297,8 +297,8 @@ Public Class DBHandler
             End If
         End Try
     End Sub
-    Public Sub AddPayrollRecord(ByVal emplID As String, ByVal name As String, ByVal grossSalary As Double, ByVal sss As Double, ByVal philhealth As Double, ByVal pagibig As Double, ByVal netSalary As Double, ByVal department As String, ByVal path As String)
-        Dim query As String = "INSERT INTO payroll_record (date_time, name, employee_id, department, gross_salary, sss, philhealth, pagibig, net_salary, receipt_path) VALUES (@date_time, @name, @employee_id, @department, @gross_salary, @sss, @philhealth, @pagibig, @net_salary, @path);"
+    Public Sub AddPayrollRecord(ByVal emplID As String, ByVal name As String, ByVal grossSalary As Double, ByVal sss As Double, ByVal philhealth As Double, ByVal pagibig As Double, ByVal netSalary As Double, ByVal department As String, ByVal path As String, ByVal total_hour As String, ByVal overtime As String)
+        Dim query As String = "INSERT INTO payroll_record (date_time, name, employee_id, department, gross_salary, sss, philhealth, pagibig, net_salary, receipt_path, total_hour, overtime) VALUES (@date_time, @name, @employee_id, @department, @gross_salary, @sss, @philhealth, @pagibig, @net_salary, @path, @th, @ov);"
 
         Try
             conn.Open()
@@ -313,6 +313,8 @@ Public Class DBHandler
                 cmd.Parameters.AddWithValue("@pagibig", pagibig)
                 cmd.Parameters.AddWithValue("@net_salary", netSalary)
                 cmd.Parameters.AddWithValue("@path", path)
+                cmd.Parameters.AddWithValue("@th", total_hour)
+                cmd.Parameters.AddWithValue("@ov", overtime)
 
 
                 cmd.ExecuteNonQuery()
@@ -327,6 +329,56 @@ Public Class DBHandler
             If conn.State = ConnectionState.Open Then conn.Close()
         End Try
     End Sub
+
+
+
+    ' for reports form
+    Public Function GetTotalNetSalary(dgv As DataGridView, Optional filter As Integer = -1) As Decimal
+        Dim total As Decimal = 0D
+        Dim query As String = "SELECT SUM(net_salary) AS total_net_salary FROM payroll_record;"
+
+        If filter = 1 Then
+            query = "SELECT SUM(net_salary) AS total_net_salary FROM payroll_record;"
+        ElseIf filter = 2 Then
+            ' total net sal per dept
+            query = "SELECT Department, SUM(net_salary) AS total_net_salary FROM payroll_record GROUP BY Department;"
+        ElseIf filter = 3 Then
+            ' total hours per dept
+            query = "SELECT Department, sum(total_hours) as total_hour FROM mypms.payroll_record GROUP BY Department;"
+        ElseIf filter = 4 Then
+            ' total overtime per dept
+            query = "SELECT Department, sum(overtime) as overtime FROM mypms.payroll_record GROUP BY Department;"
+        End If
+
+        Try
+            conn.Open()
+
+            Using cmd As New MySqlCommand(query, conn)
+                'If perDept = False Then
+                Dim result = cmd.ExecuteScalar()
+                'If result IsNot DBNull.Value AndAlso result IsNot Nothing Then
+                '    total = Convert.ToDecimal(result)
+                'Else
+                '    total = 0D
+                'End If
+                'Else
+                Dim da As New MySqlDataAdapter(cmd)
+                Dim dt As New DataTable()
+                da.Fill(dt)
+                dgv.DataSource = dt
+                'End If
+            End Using
+
+        Catch ex As MySqlException
+            MessageBox.Show("Database error retrieving total net salary: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            If conn.State = ConnectionState.Open Then conn.Close()
+        End Try
+
+        Return total
+    End Function
 
 
     'for employee list form

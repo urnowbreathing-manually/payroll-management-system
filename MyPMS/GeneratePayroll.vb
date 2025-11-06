@@ -311,11 +311,13 @@ Public Class GeneratePayroll
         Dim pagibig As String = txtbxPagIBIG.Text
         Dim netSalary As String = txtbxNetSalary.Text
         Dim dept As String = txtbxDepartment.Text
+        Dim total_hour As String = txtbxDepartment.Text
+        Dim overtime As String = txtbxDepartment.Text
 
         Dim resultPath As String = CreateReceiptPDF()
         If Not String.IsNullOrEmpty(resultPath) Then
             dbHandler.UpdatePaidField(txtbxEmployeeID.Text)
-            dbHandler.AddPayrollRecord(empID, empName, grossSalary, sss, philHealth, pagibig, netSalary, dept, resultPath)
+            dbHandler.AddPayrollRecord(empID, empName, grossSalary, sss, philHealth, pagibig, netSalary, dept, resultPath, total_hour, overtime)
         End If
     End Sub
     Private Sub FilterByDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbbxFilterByDept.SelectedIndexChanged

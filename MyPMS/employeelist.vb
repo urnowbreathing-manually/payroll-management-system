@@ -3,9 +3,9 @@ Imports Mysqlx.Datatypes
 
 Public Class employeelist
     Dim db As New DBHandler
-    Dim MainContentPanel As New Panel
     Dim isEdit = False
     Dim isViewingArchive = False
+    Dim MainContentPanel As New Panel
 
     Public Sub New(Parent As Panel)
         InitializeComponent()

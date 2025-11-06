@@ -55,6 +55,7 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Ububox.G2Crack.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=9.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\mysql.data.dll-65036\MySql.Data.dll</HintPath>
@@ -78,24 +79,34 @@
       <HintPath>..\packages\PdfSharpStand.PdfSharp.Charting.NetStandard.1.0.0\lib\netstandard2.0\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Drawing.Common.9.0.10\lib\net462\System.Drawing.Common.dll</HintPath>
     </Reference>
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -171,6 +182,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reports_UC.Designer.vb">
+      <DependentUpon>Reports_UC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports_UC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Sidebar.Designer.vb">
       <DependentUpon>Sidebar.vb</DependentUpon>
     </Compile>
@@ -213,6 +230,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pdf.Net.SDK.licx" />
+    <EmbeddedResource Include="Reports_UC.resx">
+      <DependentUpon>Reports_UC.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sidebar.resx">
       <DependentUpon>Sidebar.vb</DependentUpon>
     </EmbeddedResource>

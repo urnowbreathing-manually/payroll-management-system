@@ -96,4 +96,17 @@
         TblPanel.Controls.RemoveAt(1)
         TblPanel.Controls.Add(employee_list, 1, 0)
     End Sub
+
+    Private Sub Btn_Reports_Click(sender As Object, e As EventArgs) Handles Btn_Reports.Click
+        If FocusedButton.Name = PreviousButton.Name Then
+            Return
+        End If
+
+        ' old
+        Dim report_UC As New Reports_UC(MainContentPanel)
+        report_UC.Dock = DockStyle.Fill
+
+        TblPanel.Controls.RemoveAt(1)
+        TblPanel.Controls.Add(report_UC, 1, 0)
+    End Sub
 End Class
