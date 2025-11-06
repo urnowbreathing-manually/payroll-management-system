@@ -23,7 +23,6 @@
     ' Hide all HR Employee Panels during Sidebar button press event
     Public Sub HREMP_Panels_Hide()
         Pnl_HR_Dashboard.Hide()
-        Pnl_GeneratePayroll.Hide()
     End Sub
 
     ' Load All HR Employee Panels
@@ -43,13 +42,6 @@
         Dim HR_Dashboard As New HR_Dashboard(Pnl_HR_Dashboard)
         Pnl_HR_Dashboard.Controls.Add(HR_Dashboard)
         HR_Dashboard.Dock = DockStyle.Fill
-
-        ' Load Generate Payroll Dashboard
-        Me.Controls.Add(Pnl_GeneratePayroll)
-        Pnl_GeneratePayroll.Show()
-        Dim GeneratePayroll As New GeneratePayroll(Pnl_GeneratePayroll)
-        Pnl_GeneratePayroll.Controls.Add(GeneratePayroll)
-        GeneratePayroll.Dock = DockStyle.Fill
 
 
     End Sub

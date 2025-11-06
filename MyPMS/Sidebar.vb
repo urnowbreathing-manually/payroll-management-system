@@ -41,15 +41,6 @@
 
     End Sub
 
-    Private Sub Btn_Payroll_Click(sender As Object, e As EventArgs) Handles Btn_Payroll.Click
-        If FocusedButton.Name = PreviousButton.Name Then
-            Return
-        End If
-
-        MainForm.HREMP_Panels_Hide()
-        Pnl_GeneratePayroll.Show()
-    End Sub
-
     Private Sub Btn_Logout_Click(sender As Object, e As EventArgs) Handles Btn_Logout.Click
         ' Clear current user info when logging out
         DBHandler.currentUser = {"", "", "", "", ""}

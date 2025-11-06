@@ -78,19 +78,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBHandler.vb" />
-    <Compile Include="GeneratePayroll.Designer.vb">
-      <DependentUpon>GeneratePayroll.vb</DependentUpon>
+    <Compile Include="Globals.vb" />
+    <Compile Include="HRDB_Attendance_Instance.Designer.vb">
+      <DependentUpon>HRDB_Attendance_Instance.vb</DependentUpon>
     </Compile>
-    <Compile Include="GeneratePayroll.vb">
+    <Compile Include="HRDB_Attendance_Instance.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GenPayroll_Dialog.Designer.vb">
-      <DependentUpon>GenPayroll_Dialog.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GenPayroll_Dialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Globals.vb" />
     <Compile Include="HR_Dashboard.Designer.vb">
       <DependentUpon>HR_Dashboard.vb</DependentUpon>
     </Compile>
@@ -133,11 +127,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GeneratePayroll.resx">
-      <DependentUpon>GeneratePayroll.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GenPayroll_Dialog.resx">
-      <DependentUpon>GenPayroll_Dialog.vb</DependentUpon>
+    <EmbeddedResource Include="HRDB_Attendance_Instance.resx">
+      <DependentUpon>HRDB_Attendance_Instance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HR_Dashboard.resx">
       <DependentUpon>HR_Dashboard.vb</DependentUpon>
