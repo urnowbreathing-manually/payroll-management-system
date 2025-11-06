@@ -18,6 +18,98 @@ Public Class Reports_UC
         LoadTotalNetSalaryPerDept()
         LoadTotalHoursPerDept()
         LoadTotalOvertimePerDept()
+
+
+
+        ' total record
+        Dim paidCount As Integer = 0
+        For Each row As DataGridViewRow In dgvEmployeeList.Rows
+            If Not row.IsNewRow Then
+                paidCount += 1
+            End If
+        Next
+        lblTotalGeneratedPayroll.Text = paidCount.ToString
+        lblTotalGeneratedPayroll.Location = New Point(((pnlNetSal.Width / 2) - (lblTotalGeneratedPayroll.Width / 2)), lblTotalGeneratedPayroll.Location.Y)
+
+
+        ' total net sal
+        Dim totalNetSal As Double = 0.0
+        For Each row As DataGridViewRow In dgvPayrollRecord.Rows
+            If Not row.IsNewRow Then
+                If Not IsDBNull(row.Cells("net_salary").Value) Then
+                    totalNetSal += Double.Parse(row.Cells("net_salary").Value)
+                End If
+            End If
+        Next
+        lblTotalNetSal.Text = "P" & totalNetSal.ToString
+        lblTotalNetSal.Location = New Point(((pnlNetSal.Width / 2) - (lblTotalNetSal.Width / 2)), lblTotalNetSal.Location.Y)
+
+
+
+
+        ' total employees
+        Dim totalEmpl As Integer = 0
+        For Each row As DataGridViewRow In dgvEmployeeList.Rows
+            If Not row.IsNewRow Then
+                totalEmpl += 1
+            End If
+        Next
+        lblTotalEmployee.Text = totalEmpl.ToString
+        lblTotalEmployee.Location = New Point(((pnlNetSal.Width / 2) - (lblTotalEmployee.Width / 2)), lblTotalEmployee.Location.Y)
+
+
+
+
+        ' total overtime
+        Dim totalOvertime As Integer = 0
+        For Each row As DataGridViewRow In dgvPayrollRecord.Rows
+            If Not row.IsNewRow Then
+                If Not IsDBNull(row.Cells("overtime").Value) Then
+                    totalOvertime += Integer.Parse(row.Cells("overtime").Value)
+                End If
+            End If
+        Next
+        lblTotalOvetime.Text = "P" & totalOvertime.ToString
+        lblTotalOvetime.Location = New Point(((pnlNetSal.Width / 2) - (lblTotalOvetime.Width / 2)), lblTotalOvetime.Location.Y)
+
+
+
+        ' total hours
+        Dim totalHours As Integer = 0
+        For Each row As DataGridViewRow In dgvPayrollRecord.Rows
+            If Not row.IsNewRow Then
+                If Not IsDBNull(row.Cells("total_hours").Value) Then
+                    totalHours += Integer.Parse(row.Cells("total_hours").Value)
+                End If
+            End If
+        Next
+        lblTotalHours.Text = totalHours.ToString
+        lblTotalHours.Location = New Point(((pnlNetSal.Width / 2) - (lblTotalHours.Width / 2)), lblTotalHours.Location.Y)
+
+
+        ' total deductions
+        Dim totalDeductions As Integer = 0
+        For Each row As DataGridViewRow In dgvPayrollRecord.Rows
+            If Not row.IsNewRow Then
+                Dim val As Double = 0
+
+                If Not IsDBNull(row.Cells("sss").Value) And Double.TryParse(row.Cells("sss").Value, val) Then
+                    totalDeductions += val
+                End If
+
+                If Not IsDBNull(row.Cells("pagibig").Value) And Double.TryParse(row.Cells("pagibig").Value, val) Then
+                    totalDeductions += val
+                End If
+
+                If Not IsDBNull(row.Cells("philhealth").Value) And Double.TryParse(row.Cells("philhealth").Value, val) Then
+                    totalDeductions += val
+                End If
+
+            End If
+        Next
+        lblTotalDeductions.Text = "P" & totalDeductions.ToString
+        lblTotalDeductions.Location = New Point(((pnlNetSal.Width / 2) - (lblTotalDeductions.Width / 2)), lblTotalDeductions.Location.Y)
+
     End Sub
 
 

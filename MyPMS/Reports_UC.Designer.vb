@@ -22,27 +22,27 @@ Partial Class Reports_UC
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.pnlGeneratedPayroll = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalGeneratedPayroll = New System.Windows.Forms.Label()
+        Me.pnlEmployees = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalEmployee = New System.Windows.Forms.Label()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.pnlDeductions = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalDeductions = New System.Windows.Forms.Label()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
@@ -52,16 +52,16 @@ Partial Class Reports_UC
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Guna2Panel9 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Guna2Panel10 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.pnlOvertime = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalOvetime = New System.Windows.Forms.Label()
         Me.Guna2Panel11 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Guna2Panel12 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.pnlHours = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalHours = New System.Windows.Forms.Label()
         Me.Guna2Panel13 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Guna2Panel14 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.pnlNetSal = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTotalNetSal = New System.Windows.Forms.Label()
         Me.dgvEmployeeList = New System.Windows.Forms.DataGridView()
         Me.dgvPayrollRecord = New System.Windows.Forms.DataGridView()
         Me.dgvTotalPerDept = New System.Windows.Forms.DataGridView()
@@ -71,19 +71,19 @@ Partial Class Reports_UC
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2Panel2.SuspendLayout()
-        Me.Guna2Panel3.SuspendLayout()
+        Me.pnlGeneratedPayroll.SuspendLayout()
+        Me.pnlEmployees.SuspendLayout()
         Me.Guna2Panel6.SuspendLayout()
-        Me.Guna2Panel4.SuspendLayout()
+        Me.pnlDeductions.SuspendLayout()
         Me.Guna2Panel7.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.Guna2Panel8.SuspendLayout()
         Me.Guna2Panel9.SuspendLayout()
-        Me.Guna2Panel10.SuspendLayout()
+        Me.pnlOvertime.SuspendLayout()
         Me.Guna2Panel11.SuspendLayout()
-        Me.Guna2Panel12.SuspendLayout()
+        Me.pnlHours.SuspendLayout()
         Me.Guna2Panel13.SuspendLayout()
-        Me.Guna2Panel14.SuspendLayout()
+        Me.pnlNetSal.SuspendLayout()
         CType(Me.dgvEmployeeList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPayrollRecord, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvTotalPerDept, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +93,9 @@ Partial Class Reports_UC
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 10
         Me.Guna2Panel1.Controls.Add(Me.Chart3)
@@ -108,16 +111,16 @@ Partial Class Reports_UC
         '
         Me.Chart3.BorderlineColor = System.Drawing.Color.Black
         Me.Chart3.BorderSkin.BackColor = System.Drawing.Color.Green
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend1)
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend4)
         Me.Chart3.Location = New System.Drawing.Point(718, 67)
         Me.Chart3.Name = "Chart3"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart3.Series.Add(Series1)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Chart3.Series.Add(Series4)
         Me.Chart3.Size = New System.Drawing.Size(295, 253)
         Me.Chart3.TabIndex = 3
         Me.Chart3.Text = "Chart3"
@@ -126,16 +129,16 @@ Partial Class Reports_UC
         '
         Me.Chart2.BorderlineColor = System.Drawing.Color.Black
         Me.Chart2.BorderSkin.BackColor = System.Drawing.Color.Green
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend2)
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea5)
+        Legend5.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend5)
         Me.Chart2.Location = New System.Drawing.Point(375, 67)
         Me.Chart2.Name = "Chart2"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart2.Series.Add(Series2)
+        Series5.ChartArea = "ChartArea1"
+        Series5.Legend = "Legend1"
+        Series5.Name = "Series1"
+        Me.Chart2.Series.Add(Series5)
         Me.Chart2.Size = New System.Drawing.Size(295, 253)
         Me.Chart2.TabIndex = 2
         Me.Chart2.Text = "Chart2"
@@ -144,62 +147,64 @@ Partial Class Reports_UC
         '
         Me.Chart1.BorderlineColor = System.Drawing.Color.Black
         Me.Chart1.BorderSkin.BackColor = System.Drawing.Color.Green
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend3)
+        ChartArea6.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea6)
+        Legend6.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend6)
         Me.Chart1.Location = New System.Drawing.Point(40, 72)
         Me.Chart1.Name = "Chart1"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.Chart1.Series.Add(Series3)
+        Series6.ChartArea = "ChartArea1"
+        Series6.Legend = "Legend1"
+        Series6.Name = "Series1"
+        Me.Chart1.Series.Add(Series6)
         Me.Chart1.Size = New System.Drawing.Size(295, 253)
         Me.Chart1.TabIndex = 1
         Me.Chart1.Text = "Chart1"
         '
-        'Guna2Panel2
+        'pnlGeneratedPayroll
         '
-        Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel2.BorderRadius = 10
-        Me.Guna2Panel2.Controls.Add(Me.Label5)
-        Me.Guna2Panel2.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel2.Location = New System.Drawing.Point(88, 110)
-        Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(295, 98)
-        Me.Guna2Panel2.TabIndex = 2
+        Me.pnlGeneratedPayroll.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlGeneratedPayroll.BackColor = System.Drawing.Color.Transparent
+        Me.pnlGeneratedPayroll.BorderRadius = 10
+        Me.pnlGeneratedPayroll.Controls.Add(Me.lblTotalGeneratedPayroll)
+        Me.pnlGeneratedPayroll.FillColor = System.Drawing.Color.White
+        Me.pnlGeneratedPayroll.Location = New System.Drawing.Point(88, 110)
+        Me.pnlGeneratedPayroll.Name = "pnlGeneratedPayroll"
+        Me.pnlGeneratedPayroll.Size = New System.Drawing.Size(295, 98)
+        Me.pnlGeneratedPayroll.TabIndex = 2
         '
-        'Label5
+        'lblTotalGeneratedPayroll
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(67, 65)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(147, 21)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Total of salary paid"
+        Me.lblTotalGeneratedPayroll.AutoSize = True
+        Me.lblTotalGeneratedPayroll.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalGeneratedPayroll.Location = New System.Drawing.Point(67, 65)
+        Me.lblTotalGeneratedPayroll.Name = "lblTotalGeneratedPayroll"
+        Me.lblTotalGeneratedPayroll.Size = New System.Drawing.Size(147, 21)
+        Me.lblTotalGeneratedPayroll.TabIndex = 1
+        Me.lblTotalGeneratedPayroll.Text = "Total of salary paid"
         '
-        'Guna2Panel3
+        'pnlEmployees
         '
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel3.BorderRadius = 10
-        Me.Guna2Panel3.Controls.Add(Me.Label6)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2Panel6)
-        Me.Guna2Panel3.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel3.Location = New System.Drawing.Point(423, 110)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.Size = New System.Drawing.Size(295, 98)
-        Me.Guna2Panel3.TabIndex = 3
+        Me.pnlEmployees.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlEmployees.BackColor = System.Drawing.Color.Transparent
+        Me.pnlEmployees.BorderRadius = 10
+        Me.pnlEmployees.Controls.Add(Me.lblTotalEmployee)
+        Me.pnlEmployees.Controls.Add(Me.Guna2Panel6)
+        Me.pnlEmployees.FillColor = System.Drawing.Color.White
+        Me.pnlEmployees.Location = New System.Drawing.Point(423, 110)
+        Me.pnlEmployees.Name = "pnlEmployees"
+        Me.pnlEmployees.Size = New System.Drawing.Size(295, 98)
+        Me.pnlEmployees.TabIndex = 3
         '
-        'Label6
+        'lblTotalEmployee
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(73, 65)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(147, 21)
-        Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Total of salary paid"
+        Me.lblTotalEmployee.AutoSize = True
+        Me.lblTotalEmployee.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalEmployee.Location = New System.Drawing.Point(73, 65)
+        Me.lblTotalEmployee.Name = "lblTotalEmployee"
+        Me.lblTotalEmployee.Size = New System.Drawing.Size(147, 21)
+        Me.lblTotalEmployee.TabIndex = 2
+        Me.lblTotalEmployee.Text = "Total of salary paid"
         '
         'Guna2Panel6
         '
@@ -224,27 +229,28 @@ Partial Class Reports_UC
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Total of employees"
         '
-        'Guna2Panel4
+        'pnlDeductions
         '
-        Me.Guna2Panel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel4.BorderRadius = 10
-        Me.Guna2Panel4.Controls.Add(Me.Label7)
-        Me.Guna2Panel4.Controls.Add(Me.Guna2Panel7)
-        Me.Guna2Panel4.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel4.Location = New System.Drawing.Point(766, 110)
-        Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.Size = New System.Drawing.Size(295, 98)
-        Me.Guna2Panel4.TabIndex = 3
+        Me.pnlDeductions.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlDeductions.BackColor = System.Drawing.Color.Transparent
+        Me.pnlDeductions.BorderRadius = 10
+        Me.pnlDeductions.Controls.Add(Me.lblTotalDeductions)
+        Me.pnlDeductions.Controls.Add(Me.Guna2Panel7)
+        Me.pnlDeductions.FillColor = System.Drawing.Color.White
+        Me.pnlDeductions.Location = New System.Drawing.Point(766, 110)
+        Me.pnlDeductions.Name = "pnlDeductions"
+        Me.pnlDeductions.Size = New System.Drawing.Size(295, 98)
+        Me.pnlDeductions.TabIndex = 3
         '
-        'Label7
+        'lblTotalDeductions
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(78, 65)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(147, 21)
-        Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Total of salary paid"
+        Me.lblTotalDeductions.AutoSize = True
+        Me.lblTotalDeductions.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalDeductions.Location = New System.Drawing.Point(78, 65)
+        Me.lblTotalDeductions.Name = "lblTotalDeductions"
+        Me.lblTotalDeductions.Size = New System.Drawing.Size(147, 21)
+        Me.lblTotalDeductions.TabIndex = 5
+        Me.lblTotalDeductions.Text = "Total of salary paid"
         '
         'Guna2Panel7
         '
@@ -271,6 +277,7 @@ Partial Class Reports_UC
         '
         'Guna2Panel5
         '
+        Me.Guna2Panel5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel5.BorderRadius = 10
         Me.Guna2Panel5.Controls.Add(Me.Label1)
@@ -286,14 +293,16 @@ Partial Class Reports_UC
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(70, 18)
+        Me.Label1.Location = New System.Drawing.Point(48, 17)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 21)
+        Me.Label1.Size = New System.Drawing.Size(199, 21)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Total of Gross salary"
+        Me.Label1.Text = "Total of generated payroll"
         '
         'Guna2Panel8
         '
+        Me.Guna2Panel8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel8.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel8.BorderRadius = 10
         Me.Guna2Panel8.Controls.Add(Me.dgvTotalOvertimePerDept)
@@ -322,6 +331,7 @@ Partial Class Reports_UC
         Me.Guna2Button1.Size = New System.Drawing.Size(136, 35)
         Me.Guna2Button1.TabIndex = 1
         Me.Guna2Button1.Text = "Guna2Button1"
+        Me.Guna2Button1.Visible = False
         '
         'Label4
         '
@@ -335,6 +345,7 @@ Partial Class Reports_UC
         '
         'Guna2Panel9
         '
+        Me.Guna2Panel9.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2Panel9.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel9.BorderRadius = 10
         Me.Guna2Panel9.Controls.Add(Me.Label8)
@@ -356,27 +367,28 @@ Partial Class Reports_UC
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Total of Net Salary"
         '
-        'Guna2Panel10
+        'pnlOvertime
         '
-        Me.Guna2Panel10.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel10.BorderRadius = 10
-        Me.Guna2Panel10.Controls.Add(Me.Label9)
-        Me.Guna2Panel10.Controls.Add(Me.Guna2Panel11)
-        Me.Guna2Panel10.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel10.Location = New System.Drawing.Point(766, 227)
-        Me.Guna2Panel10.Name = "Guna2Panel10"
-        Me.Guna2Panel10.Size = New System.Drawing.Size(295, 98)
-        Me.Guna2Panel10.TabIndex = 8
+        Me.pnlOvertime.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlOvertime.BackColor = System.Drawing.Color.Transparent
+        Me.pnlOvertime.BorderRadius = 10
+        Me.pnlOvertime.Controls.Add(Me.lblTotalOvetime)
+        Me.pnlOvertime.Controls.Add(Me.Guna2Panel11)
+        Me.pnlOvertime.FillColor = System.Drawing.Color.White
+        Me.pnlOvertime.Location = New System.Drawing.Point(766, 227)
+        Me.pnlOvertime.Name = "pnlOvertime"
+        Me.pnlOvertime.Size = New System.Drawing.Size(295, 98)
+        Me.pnlOvertime.TabIndex = 8
         '
-        'Label9
+        'lblTotalOvetime
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(78, 65)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(147, 21)
-        Me.Label9.TabIndex = 5
-        Me.Label9.Text = "Total of salary paid"
+        Me.lblTotalOvetime.AutoSize = True
+        Me.lblTotalOvetime.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalOvetime.Location = New System.Drawing.Point(78, 65)
+        Me.lblTotalOvetime.Name = "lblTotalOvetime"
+        Me.lblTotalOvetime.Size = New System.Drawing.Size(147, 21)
+        Me.lblTotalOvetime.TabIndex = 5
+        Me.lblTotalOvetime.Text = "Total of salary paid"
         '
         'Guna2Panel11
         '
@@ -401,27 +413,28 @@ Partial Class Reports_UC
         Me.Label10.TabIndex = 2
         Me.Label10.Text = "Total of Overtime"
         '
-        'Guna2Panel12
+        'pnlHours
         '
-        Me.Guna2Panel12.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel12.BorderRadius = 10
-        Me.Guna2Panel12.Controls.Add(Me.Label11)
-        Me.Guna2Panel12.Controls.Add(Me.Guna2Panel13)
-        Me.Guna2Panel12.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel12.Location = New System.Drawing.Point(423, 227)
-        Me.Guna2Panel12.Name = "Guna2Panel12"
-        Me.Guna2Panel12.Size = New System.Drawing.Size(295, 98)
-        Me.Guna2Panel12.TabIndex = 9
+        Me.pnlHours.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlHours.BackColor = System.Drawing.Color.Transparent
+        Me.pnlHours.BorderRadius = 10
+        Me.pnlHours.Controls.Add(Me.lblTotalHours)
+        Me.pnlHours.Controls.Add(Me.Guna2Panel13)
+        Me.pnlHours.FillColor = System.Drawing.Color.White
+        Me.pnlHours.Location = New System.Drawing.Point(423, 227)
+        Me.pnlHours.Name = "pnlHours"
+        Me.pnlHours.Size = New System.Drawing.Size(295, 98)
+        Me.pnlHours.TabIndex = 9
         '
-        'Label11
+        'lblTotalHours
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(73, 65)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(147, 21)
-        Me.Label11.TabIndex = 2
-        Me.Label11.Text = "Total of salary paid"
+        Me.lblTotalHours.AutoSize = True
+        Me.lblTotalHours.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalHours.Location = New System.Drawing.Point(73, 65)
+        Me.lblTotalHours.Name = "lblTotalHours"
+        Me.lblTotalHours.Size = New System.Drawing.Size(147, 21)
+        Me.lblTotalHours.TabIndex = 2
+        Me.lblTotalHours.Text = "Total of salary paid"
         '
         'Guna2Panel13
         '
@@ -446,26 +459,27 @@ Partial Class Reports_UC
         Me.Label12.TabIndex = 1
         Me.Label12.Text = "Total of Hours"
         '
-        'Guna2Panel14
+        'pnlNetSal
         '
-        Me.Guna2Panel14.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Panel14.BorderRadius = 10
-        Me.Guna2Panel14.Controls.Add(Me.Label13)
-        Me.Guna2Panel14.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel14.Location = New System.Drawing.Point(88, 227)
-        Me.Guna2Panel14.Name = "Guna2Panel14"
-        Me.Guna2Panel14.Size = New System.Drawing.Size(295, 98)
-        Me.Guna2Panel14.TabIndex = 6
+        Me.pnlNetSal.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlNetSal.BackColor = System.Drawing.Color.Transparent
+        Me.pnlNetSal.BorderRadius = 10
+        Me.pnlNetSal.Controls.Add(Me.lblTotalNetSal)
+        Me.pnlNetSal.FillColor = System.Drawing.Color.White
+        Me.pnlNetSal.Location = New System.Drawing.Point(88, 227)
+        Me.pnlNetSal.Name = "pnlNetSal"
+        Me.pnlNetSal.Size = New System.Drawing.Size(295, 98)
+        Me.pnlNetSal.TabIndex = 6
         '
-        'Label13
+        'lblTotalNetSal
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(67, 65)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(147, 21)
-        Me.Label13.TabIndex = 1
-        Me.Label13.Text = "Total of salary paid"
+        Me.lblTotalNetSal.AutoSize = True
+        Me.lblTotalNetSal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalNetSal.Location = New System.Drawing.Point(67, 65)
+        Me.lblTotalNetSal.Name = "lblTotalNetSal"
+        Me.lblTotalNetSal.Size = New System.Drawing.Size(147, 21)
+        Me.lblTotalNetSal.TabIndex = 1
+        Me.lblTotalNetSal.Text = "Total of salary paid"
         '
         'dgvEmployeeList
         '
@@ -517,14 +531,14 @@ Partial Class Reports_UC
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.Guna2Panel9)
-        Me.Controls.Add(Me.Guna2Panel10)
+        Me.Controls.Add(Me.pnlOvertime)
         Me.Controls.Add(Me.Guna2Panel8)
-        Me.Controls.Add(Me.Guna2Panel12)
+        Me.Controls.Add(Me.pnlHours)
         Me.Controls.Add(Me.Guna2Panel5)
-        Me.Controls.Add(Me.Guna2Panel14)
-        Me.Controls.Add(Me.Guna2Panel4)
-        Me.Controls.Add(Me.Guna2Panel3)
-        Me.Controls.Add(Me.Guna2Panel2)
+        Me.Controls.Add(Me.pnlNetSal)
+        Me.Controls.Add(Me.pnlDeductions)
+        Me.Controls.Add(Me.pnlEmployees)
+        Me.Controls.Add(Me.pnlGeneratedPayroll)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Name = "Reports_UC"
         Me.Size = New System.Drawing.Size(1144, 778)
@@ -532,14 +546,14 @@ Partial Class Reports_UC
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Guna2Panel2.ResumeLayout(False)
-        Me.Guna2Panel2.PerformLayout()
-        Me.Guna2Panel3.ResumeLayout(False)
-        Me.Guna2Panel3.PerformLayout()
+        Me.pnlGeneratedPayroll.ResumeLayout(False)
+        Me.pnlGeneratedPayroll.PerformLayout()
+        Me.pnlEmployees.ResumeLayout(False)
+        Me.pnlEmployees.PerformLayout()
         Me.Guna2Panel6.ResumeLayout(False)
         Me.Guna2Panel6.PerformLayout()
-        Me.Guna2Panel4.ResumeLayout(False)
-        Me.Guna2Panel4.PerformLayout()
+        Me.pnlDeductions.ResumeLayout(False)
+        Me.pnlDeductions.PerformLayout()
         Me.Guna2Panel7.ResumeLayout(False)
         Me.Guna2Panel7.PerformLayout()
         Me.Guna2Panel5.ResumeLayout(False)
@@ -548,16 +562,16 @@ Partial Class Reports_UC
         Me.Guna2Panel8.PerformLayout()
         Me.Guna2Panel9.ResumeLayout(False)
         Me.Guna2Panel9.PerformLayout()
-        Me.Guna2Panel10.ResumeLayout(False)
-        Me.Guna2Panel10.PerformLayout()
+        Me.pnlOvertime.ResumeLayout(False)
+        Me.pnlOvertime.PerformLayout()
         Me.Guna2Panel11.ResumeLayout(False)
         Me.Guna2Panel11.PerformLayout()
-        Me.Guna2Panel12.ResumeLayout(False)
-        Me.Guna2Panel12.PerformLayout()
+        Me.pnlHours.ResumeLayout(False)
+        Me.pnlHours.PerformLayout()
         Me.Guna2Panel13.ResumeLayout(False)
         Me.Guna2Panel13.PerformLayout()
-        Me.Guna2Panel14.ResumeLayout(False)
-        Me.Guna2Panel14.PerformLayout()
+        Me.pnlNetSal.ResumeLayout(False)
+        Me.pnlNetSal.PerformLayout()
         CType(Me.dgvEmployeeList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPayrollRecord, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvTotalPerDept, System.ComponentModel.ISupportInitialize).EndInit()
@@ -570,9 +584,9 @@ Partial Class Reports_UC
     Friend WithEvents Chart3 As DataVisualization.Charting.Chart
     Friend WithEvents Chart2 As DataVisualization.Charting.Chart
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
-    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents pnlGeneratedPayroll As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents pnlEmployees As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents pnlDeductions As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
@@ -581,22 +595,22 @@ Partial Class Reports_UC
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel8 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblTotalGeneratedPayroll As Label
+    Friend WithEvents lblTotalEmployee As Label
+    Friend WithEvents lblTotalDeductions As Label
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel9 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents Guna2Panel10 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label9 As Label
+    Friend WithEvents pnlOvertime As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblTotalOvetime As Label
     Friend WithEvents Guna2Panel11 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label10 As Label
-    Friend WithEvents Guna2Panel12 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label11 As Label
+    Friend WithEvents pnlHours As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblTotalHours As Label
     Friend WithEvents Guna2Panel13 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label12 As Label
-    Friend WithEvents Guna2Panel14 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label13 As Label
+    Friend WithEvents pnlNetSal As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents lblTotalNetSal As Label
     Friend WithEvents dgvEmployeeList As DataGridView
     Friend WithEvents dgvPayrollRecord As DataGridView
     Friend WithEvents dgvTotalPerDept As DataGridView
