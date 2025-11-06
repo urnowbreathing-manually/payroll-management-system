@@ -24,12 +24,9 @@ Partial Class Sidebar
     Private Sub InitializeComponent()
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.btnViewPayroll = New System.Windows.Forms.Button()
-        Me.Btn_Attendance = New System.Windows.Forms.Button()
         Me.Btn_Reports = New System.Windows.Forms.Button()
         Me.Btn_Logout = New System.Windows.Forms.Button()
-        Me.Btn_Settings = New System.Windows.Forms.Button()
         Me.Btn_Payroll = New System.Windows.Forms.Button()
-        Me.Btn_Requests = New System.Windows.Forms.Button()
         Me.Btn_Employees = New System.Windows.Forms.Button()
         Me.Btn_Dashboard = New System.Windows.Forms.Button()
         Me.Guna2GradientPanel1.SuspendLayout()
@@ -41,12 +38,9 @@ Partial Class Sidebar
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2GradientPanel1.Controls.Add(Me.btnViewPayroll)
-        Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Attendance)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Reports)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Logout)
-        Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Settings)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Payroll)
-        Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Requests)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Employees)
         Me.Guna2GradientPanel1.Controls.Add(Me.Btn_Dashboard)
         Me.Guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -67,31 +61,13 @@ Partial Class Sidebar
         Me.btnViewPayroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewPayroll.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnViewPayroll.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnViewPayroll.Location = New System.Drawing.Point(0, 220)
+        Me.btnViewPayroll.Location = New System.Drawing.Point(0, 170)
         Me.btnViewPayroll.Margin = New System.Windows.Forms.Padding(0)
         Me.btnViewPayroll.Name = "btnViewPayroll"
         Me.btnViewPayroll.Size = New System.Drawing.Size(200, 50)
         Me.btnViewPayroll.TabIndex = 16
         Me.btnViewPayroll.Text = "View payroll record"
         Me.btnViewPayroll.UseVisualStyleBackColor = False
-        '
-        'Btn_Attendance
-        '
-        Me.Btn_Attendance.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Btn_Attendance.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_Attendance.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Btn_Attendance.FlatAppearance.BorderSize = 0
-        Me.Btn_Attendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Attendance.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Attendance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Attendance.Location = New System.Drawing.Point(0, 327)
-        Me.Btn_Attendance.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_Attendance.Name = "Btn_Attendance"
-        Me.Btn_Attendance.Size = New System.Drawing.Size(200, 50)
-        Me.Btn_Attendance.TabIndex = 15
-        Me.Btn_Attendance.Text = "Attendance"
-        Me.Btn_Attendance.UseVisualStyleBackColor = False
         '
         'Btn_Reports
         '
@@ -103,7 +79,7 @@ Partial Class Sidebar
         Me.Btn_Reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Reports.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Reports.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Reports.Location = New System.Drawing.Point(0, 277)
+        Me.Btn_Reports.Location = New System.Drawing.Point(0, 227)
         Me.Btn_Reports.Margin = New System.Windows.Forms.Padding(0)
         Me.Btn_Reports.Name = "Btn_Reports"
         Me.Btn_Reports.Size = New System.Drawing.Size(200, 50)
@@ -129,24 +105,6 @@ Partial Class Sidebar
         Me.Btn_Logout.Text = "Logout"
         Me.Btn_Logout.UseVisualStyleBackColor = False
         '
-        'Btn_Settings
-        '
-        Me.Btn_Settings.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Btn_Settings.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_Settings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Btn_Settings.FlatAppearance.BorderSize = 0
-        Me.Btn_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Settings.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Settings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Settings.Location = New System.Drawing.Point(0, 450)
-        Me.Btn_Settings.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_Settings.Name = "Btn_Settings"
-        Me.Btn_Settings.Size = New System.Drawing.Size(200, 50)
-        Me.Btn_Settings.TabIndex = 12
-        Me.Btn_Settings.Text = "Settings"
-        Me.Btn_Settings.UseVisualStyleBackColor = False
-        '
         'Btn_Payroll
         '
         Me.Btn_Payroll.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -157,31 +115,13 @@ Partial Class Sidebar
         Me.Btn_Payroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Payroll.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Payroll.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Payroll.Location = New System.Drawing.Point(0, 170)
+        Me.Btn_Payroll.Location = New System.Drawing.Point(0, 120)
         Me.Btn_Payroll.Margin = New System.Windows.Forms.Padding(0)
         Me.Btn_Payroll.Name = "Btn_Payroll"
         Me.Btn_Payroll.Size = New System.Drawing.Size(200, 50)
         Me.Btn_Payroll.TabIndex = 11
         Me.Btn_Payroll.Text = "Payroll"
         Me.Btn_Payroll.UseVisualStyleBackColor = False
-        '
-        'Btn_Requests
-        '
-        Me.Btn_Requests.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Btn_Requests.BackColor = System.Drawing.Color.Transparent
-        Me.Btn_Requests.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Btn_Requests.FlatAppearance.BorderSize = 0
-        Me.Btn_Requests.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Requests.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Requests.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Requests.Location = New System.Drawing.Point(0, 120)
-        Me.Btn_Requests.Margin = New System.Windows.Forms.Padding(0)
-        Me.Btn_Requests.Name = "Btn_Requests"
-        Me.Btn_Requests.Size = New System.Drawing.Size(200, 50)
-        Me.Btn_Requests.TabIndex = 10
-        Me.Btn_Requests.Text = "Requests"
-        Me.Btn_Requests.UseVisualStyleBackColor = False
         '
         'Btn_Employees
         '
@@ -234,12 +174,9 @@ Partial Class Sidebar
     End Sub
 
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
-    Friend WithEvents Btn_Attendance As Button
     Friend WithEvents Btn_Reports As Button
     Friend WithEvents Btn_Logout As Button
-    Friend WithEvents Btn_Settings As Button
     Friend WithEvents Btn_Payroll As Button
-    Friend WithEvents Btn_Requests As Button
     Friend WithEvents Btn_Employees As Button
     Friend WithEvents Btn_Dashboard As Button
     Friend WithEvents btnViewPayroll As Button

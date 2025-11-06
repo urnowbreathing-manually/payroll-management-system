@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class employeelist
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,15 @@ Partial Class employeelist
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.btnSearch = New Guna.UI2.WinForms.Guna2Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.txtbxSearchEmployee = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.cmbbxFilterByDept = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -56,14 +53,92 @@ Partial Class employeelist
         Me.btnSave = New Guna.UI2.WinForms.Guna2Button()
         Me.txtbxSalary = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.btnSearch)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.txtbxSearchEmployee)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.DataGridView1)
+        Me.Panel3.Controls.Add(Me.cmbbxFilterByDept)
+        Me.Panel3.Location = New System.Drawing.Point(26, 400)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1301, 312)
+        Me.Panel3.TabIndex = 29
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackColor = System.Drawing.Color.Transparent
+        Me.btnSearch.BorderRadius = 10
+        Me.btnSearch.FillColor = System.Drawing.Color.SpringGreen
+        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.ForeColor = System.Drawing.Color.Black
+        Me.btnSearch.Location = New System.Drawing.Point(477, 16)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.ShadowDecoration.BorderRadius = 10
+        Me.btnSearch.ShadowDecoration.Enabled = True
+        Me.btnSearch.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(1, 1, 5, 5)
+        Me.btnSearch.Size = New System.Drawing.Size(110, 38)
+        Me.btnSearch.TabIndex = 73
+        Me.btnSearch.Text = "Search"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(27, 24)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(59, 21)
+        Me.Label8.TabIndex = 73
+        Me.Label8.Text = "Search"
+        '
+        'txtbxSearchEmployee
+        '
+        Me.txtbxSearchEmployee.BackColor = System.Drawing.Color.Transparent
+        Me.txtbxSearchEmployee.BorderRadius = 10
+        Me.txtbxSearchEmployee.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtbxSearchEmployee.DefaultText = ""
+        Me.txtbxSearchEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtbxSearchEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtbxSearchEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtbxSearchEmployee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtbxSearchEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtbxSearchEmployee.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtbxSearchEmployee.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.txtbxSearchEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtbxSearchEmployee.Location = New System.Drawing.Point(93, 17)
+        Me.txtbxSearchEmployee.Name = "txtbxSearchEmployee"
+        Me.txtbxSearchEmployee.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtbxSearchEmployee.PlaceholderText = ""
+        Me.txtbxSearchEmployee.SelectedText = ""
+        Me.txtbxSearchEmployee.ShadowDecoration.BorderRadius = 10
+        Me.txtbxSearchEmployee.ShadowDecoration.Enabled = True
+        Me.txtbxSearchEmployee.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(1, 1, 5, 5)
+        Me.txtbxSearchEmployee.Size = New System.Drawing.Size(363, 34)
+        Me.txtbxSearchEmployee.TabIndex = 73
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(839, 24)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(161, 21)
+        Me.Label7.TabIndex = 76
+        Me.Label7.Text = "Filter by Department"
         '
         'DataGridView1
         '
@@ -76,110 +151,31 @@ Partial Class employeelist
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 440)
+        Me.DataGridView1.Location = New System.Drawing.Point(21, 76)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(1027, 263)
-        Me.DataGridView1.TabIndex = 9
+        Me.DataGridView1.Size = New System.Drawing.Size(1261, 218)
+        Me.DataGridView1.TabIndex = 75
         '
-        'Panel1
+        'cmbbxFilterByDept
         '
-        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Location = New System.Drawing.Point(1087, 23)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(251, 119)
-        Me.Panel1.TabIndex = 20
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(54, 18)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(149, 21)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Total of employees"
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Location = New System.Drawing.Point(1087, 185)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(251, 119)
-        Me.Panel2.TabIndex = 26
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(64, 16)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(109, 21)
-        Me.Label7.TabIndex = 25
-        Me.Label7.Text = "Email address"
-        '
-        'Panel3
-        '
-        Me.Panel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.ComboBox3)
-        Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.ComboBox2)
-        Me.Panel3.Location = New System.Drawing.Point(1094, 360)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(243, 339)
-        Me.Panel3.TabIndex = 29
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(24, 156)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(77, 21)
-        Me.Label9.TabIndex = 31
-        Me.Label9.Text = "Filter A-Z"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(29, 191)
-        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(188, 25)
-        Me.ComboBox3.TabIndex = 32
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(20, 44)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(160, 21)
-        Me.Label8.TabIndex = 26
-        Me.Label8.Text = "Filter by department"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(24, 80)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(188, 25)
-        Me.ComboBox2.TabIndex = 30
+        Me.cmbbxFilterByDept.BackColor = System.Drawing.Color.Transparent
+        Me.cmbbxFilterByDept.BorderRadius = 10
+        Me.cmbbxFilterByDept.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbbxFilterByDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbbxFilterByDept.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbbxFilterByDept.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbbxFilterByDept.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbbxFilterByDept.ForeColor = System.Drawing.Color.Black
+        Me.cmbbxFilterByDept.ItemHeight = 30
+        Me.cmbbxFilterByDept.Location = New System.Drawing.Point(1007, 15)
+        Me.cmbbxFilterByDept.Name = "cmbbxFilterByDept"
+        Me.cmbbxFilterByDept.ShadowDecoration.BorderRadius = 10
+        Me.cmbbxFilterByDept.ShadowDecoration.Enabled = True
+        Me.cmbbxFilterByDept.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(1, 1, 5, 5)
+        Me.cmbbxFilterByDept.Size = New System.Drawing.Size(210, 36)
+        Me.cmbbxFilterByDept.TabIndex = 73
         '
         'Label10
         '
@@ -254,9 +250,9 @@ Partial Class employeelist
         Me.Label11.Location = New System.Drawing.Point(326, 181)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(55, 21)
+        Me.Label11.Size = New System.Drawing.Size(89, 21)
         Me.Label11.TabIndex = 45
-        Me.Label11.Text = "Status"
+        Me.Label11.Text = "Civil Status"
         '
         'Label12
         '
@@ -423,8 +419,6 @@ Partial Class employeelist
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderRadius = 10
-        Me.Guna2Panel1.Controls.Add(Me.Guna2TextBox1)
-        Me.Guna2Panel1.Controls.Add(Me.Label14)
         Me.Guna2Panel1.Controls.Add(Me.cmbbxDepartment)
         Me.Guna2Panel1.Controls.Add(Me.txtbxStatus)
         Me.Guna2Panel1.Controls.Add(Me.btnViewArchive)
@@ -448,9 +442,9 @@ Partial Class employeelist
         Me.Guna2Panel1.Controls.Add(Me.Label2)
         Me.Guna2Panel1.Controls.Add(Me.Label1)
         Me.Guna2Panel1.FillColor = System.Drawing.Color.White
-        Me.Guna2Panel1.Location = New System.Drawing.Point(26, 78)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(26, 74)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(1026, 329)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(1301, 282)
         Me.Guna2Panel1.TabIndex = 59
         '
         'cmbbxDepartment
@@ -504,7 +498,7 @@ Partial Class employeelist
         Me.btnViewArchive.FillColor = System.Drawing.Color.Gold
         Me.btnViewArchive.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnViewArchive.ForeColor = System.Drawing.Color.Black
-        Me.btnViewArchive.Location = New System.Drawing.Point(882, 32)
+        Me.btnViewArchive.Location = New System.Drawing.Point(1162, 37)
         Me.btnViewArchive.Margin = New System.Windows.Forms.Padding(4)
         Me.btnViewArchive.Name = "btnViewArchive"
         Me.btnViewArchive.ShadowDecoration.BorderRadius = 10
@@ -521,7 +515,7 @@ Partial Class employeelist
         Me.btnCancel.FillColor = System.Drawing.Color.Gray
         Me.btnCancel.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Location = New System.Drawing.Point(882, 200)
+        Me.btnCancel.Location = New System.Drawing.Point(1162, 205)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.ShadowDecoration.BorderRadius = 10
@@ -538,7 +532,7 @@ Partial Class employeelist
         Me.btnArchive.FillColor = System.Drawing.Color.Gold
         Me.btnArchive.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnArchive.ForeColor = System.Drawing.Color.Black
-        Me.btnArchive.Location = New System.Drawing.Point(882, 142)
+        Me.btnArchive.Location = New System.Drawing.Point(1162, 147)
         Me.btnArchive.Margin = New System.Windows.Forms.Padding(4)
         Me.btnArchive.Name = "btnArchive"
         Me.btnArchive.ShadowDecoration.BorderRadius = 10
@@ -555,7 +549,7 @@ Partial Class employeelist
         Me.btnSave.FillColor = System.Drawing.Color.SpringGreen
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.Black
-        Me.btnSave.Location = New System.Drawing.Point(882, 84)
+        Me.btnSave.Location = New System.Drawing.Point(1162, 89)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.ShadowDecoration.BorderRadius = 10
@@ -601,42 +595,6 @@ Partial Class employeelist
         Me.Label15.TabIndex = 63
         Me.Label15.Text = "Salary"
         '
-        'Guna2TextBox1
-        '
-        Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox1.BorderRadius = 10
-        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Guna2TextBox1.DefaultText = ""
-        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2TextBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(18, 282)
-        Me.Guna2TextBox1.Name = "Guna2TextBox1"
-        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Guna2TextBox1.PlaceholderText = ""
-        Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.ShadowDecoration.BorderRadius = 10
-        Me.Guna2TextBox1.ShadowDecoration.Enabled = True
-        Me.Guna2TextBox1.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(1, 1, 5, 5)
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(248, 34)
-        Me.Guna2TextBox1.TabIndex = 74
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(31, 258)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(79, 21)
-        Me.Label14.TabIndex = 73
-        Me.Label14.Text = "Password"
-        '
         'employeelist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -644,36 +602,20 @@ Partial Class employeelist
         Me.Controls.Add(Me.Guna2Panel1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(0)
         Me.Name = "employeelist"
         Me.Size = New System.Drawing.Size(1360, 732)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label7 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label9 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
@@ -698,6 +640,10 @@ Partial Class employeelist
     Friend WithEvents btnSave As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtbxStatus As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cmbbxDepartment As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label14 As Label
+    Friend WithEvents cmbbxFilterByDept As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label7 As Label
+    Friend WithEvents btnSearch As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtbxSearchEmployee As Guna.UI2.WinForms.Guna2TextBox
 End Class

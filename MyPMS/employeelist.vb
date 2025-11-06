@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Runtime.CompilerServices
 Imports Mysqlx.Datatypes
 
 Public Class employeelist
@@ -14,11 +15,15 @@ Public Class employeelist
     Private Sub employeelist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         db.RetrieveAllEmployeeData(DataGridView1)
         DataGridView1.Columns("ID").Visible = False
-        db.RetrieveDepartments(cmbbxDepartment)
+        DataGridView1.Columns("paid").Visible = False
+        db.RetrieveDepartments(cmbbxFilterByDept)
 
         dateBirthDate.MaxDate = Date.Today.AddYears(-18)
         dateHireDate.MaxDate = Date.Today.Date
         AddHandler dateBirthDate.ValueChanged, AddressOf HandleBirthDateValidation
+
+        AddHandler btnArchive.Click, AddressOf btnArchive_Click
+
     End Sub
 
 
@@ -68,19 +73,21 @@ Public Class employeelist
     End Sub
     Private Function ValidateSaveButton()
         If String.IsNullOrEmpty(txtbxEmployeeID.Text) Then
+            MsgBox("Employee ID text: " & txtbxEmployeeID.Text)
             Return False
+        Else Return True
         End If
     End Function
 
 
 
-    ' buttons
+    ' buttons & textbox handlers
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         isEdit = False
 
         txtbxEmployeeID.Text = ""
         txtbxName.Text = ""
-        cmbbxDepartment.SelectedIndex = 0
+        cmbbxDepartment.SelectedIndex = -1
         txtbxSalary.Text = ""
         txtbxContactNo.Text = ""
         txtbxEmailAddress.Text = ""
@@ -100,7 +107,9 @@ Public Class employeelist
         Dim birthdate As String = dateBirthDate.Value.ToString
         Dim hiredate As String = dateHireDate.Value.ToString
 
-        If Not ValidateSaveButton() Then Return
+        If Not ValidateSaveButton() Then
+            Return
+        End If
 
         If isEdit Then
             If db.UpdateEmployee(emplID, name, dept, eaddr, birthdate, contact, salary, hiredate) Then
@@ -119,7 +128,7 @@ Public Class employeelist
             End If
         End If
     End Sub
-    Private Sub btnArchive_Click(sender As Object, e As EventArgs) Handles btnArchive.Click
+    Private Sub btnArchive_Click(sender As Object, e As EventArgs)
         If Not ValidateSaveButton() Then Return
 
         If db.MoveEmployeeToArchive(txtbxEmployeeID.Text) Then
@@ -131,29 +140,47 @@ Public Class employeelist
         End If
 
     End Sub
+    Private Sub btnUnArchive_Click(sender As Object, e As EventArgs)
+        If Not ValidateSaveButton() Then Return
+
+        If db.MoveEmployeeToActive(txtbxEmployeeID.Text) Then
+            MsgBox("Successfully un-archived employee!", MsgBoxStyle.Information, "Archived employee")
+            db.RetrieveAllArchiveEmployeeData(DataGridView1)
+            btnCancel_Click(Nothing, Nothing)
+        Else
+            MsgBox("Failed to un-archived employee!", MsgBoxStyle.Critical, "Failed to archived employee")
+        End If
+    End Sub
     Private Sub btnViewArchive_Click(sender As Object, e As EventArgs) Handles btnViewArchive.Click
         If isViewingArchive = False Then
-            Label10.Text = "Employee list archived"
 
+            ' archive button
+            RemoveHandler btnArchive.Click, AddressOf btnArchive_Click
+            AddHandler btnArchive.Click, AddressOf btnUnArchive_Click
+            btnArchive.Text = "Un-archive"
+
+
+            Label10.Text = "Employee list archived"
             btnViewArchive.Text = "View actives"
             btnViewArchive.FillColor = Color.LightSteelBlue
-
-            btnArchive.Enabled = False
-            btnSave.Text = "Un-archive"
-
+            btnSave.Enabled = False
             btnCancel_Click(Nothing, Nothing)
             db.RetrieveAllArchiveEmployeeData(DataGridView1)
-
             isViewingArchive = True
         Else
-            Label10.Text = "Employee list"
+            ' archive button
+            RemoveHandler btnArchive.Click, AddressOf btnArchive_Click
+            AddHandler btnArchive.Click, AddressOf btnUnArchive_Click
+            btnArchive.Text = "Archive"
 
+
+            RemoveHandler btnArchive.Click, AddressOf btnUnArchive_Click
+            AddHandler btnArchive.Click, AddressOf btnArchive_Click
+
+            Label10.Text = "Employee list"
             btnViewArchive.Text = "View archive"
             btnViewArchive.FillColor = Color.Gold
-
-            btnArchive.Enabled = True
-            btnSave.Text = "Save"
-
+            btnSave.Enabled = True
             btnCancel_Click(Nothing, Nothing)
             db.RetrieveAllEmployeeData(DataGridView1)
             isViewingArchive = False
@@ -161,4 +188,72 @@ Public Class employeelist
 
 
     End Sub
+    Private Sub ReloadDGV(Optional inArchive As Boolean = False)
+        DataGridView1.Controls.Clear()
+        DataGridView1.DataSource = Nothing
+        'cmbbxFilterByDept.SelectedIndex = -1
+
+        If Not inArchive Then
+            db.RetrieveAllEmployeeData(DataGridView1)
+        Else
+            db.RetrieveAllArchiveEmployeeData(DataGridView1)
+        End If
+
+        DataGridView1.Columns("ID").Visible = False
+        DataGridView1.Columns("paid").Visible = False
+        AddHandler DataGridView1.CellClick, AddressOf Cell_click_CellClick
+
+    End Sub
+    Private Sub ReloadFilterDGV(ByVal filter As String, ByVal filterField As String, Optional inArchive As Boolean = False)
+        'cmbbxFilterByDept.SelectedIndex = -1
+        DataGridView1.Controls.Clear()
+        DataGridView1.DataSource = Nothing
+
+        If Not inArchive Then
+            db.RetrieveAllEmployeeData(DataGridView1, filter, filterField)
+        Else
+            db.RetrieveAllArchiveEmployeeData(DataGridView1, filter, filterField)
+        End If
+
+        DataGridView1.Columns("ID").Visible = False
+        DataGridView1.Columns("paid").Visible = False
+        AddHandler DataGridView1.CellClick, AddressOf Cell_click_CellClick
+
+    End Sub
+
+
+
+
+
+
+    Private Sub SearchEmployee_Button(sender As Object, e As EventArgs) Handles btnSearch.Click
+        If String.IsNullOrEmpty(txtbxSearchEmployee.Text) Then ReloadDGV()
+        ReloadFilterDGV(txtbxSearchEmployee.Text, "", isViewingArchive)
+    End Sub
+    Private Sub txtbxSearchEmployee_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtbxSearchEmployee.KeyPress
+        If Not Asc(e.KeyChar) = 13 Then Return
+        If String.IsNullOrEmpty(txtbxSearchEmployee.Text) Then ReloadDGV()
+        ReloadFilterDGV(txtbxSearchEmployee.Text, "", isViewingArchive)
+    End Sub
+    Private Sub FilterByDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbbxFilterByDept.SelectedIndexChanged
+        If String.IsNullOrEmpty(cmbbxFilterByDept.Text) Then
+            Return
+        End If
+
+        DataGridView1.Controls.Clear()
+        txtbxSearchEmployee.Text = ""
+        DataGridView1.DataSource = Nothing
+
+        If Not isViewingArchive Then
+            db.RetrieveAllEmployeeData(DataGridView1, cmbbxFilterByDept.Text, "department")
+        Else
+            db.RetrieveAllArchiveEmployeeData(DataGridView1, cmbbxFilterByDept.Text, "department")
+        End If
+
+        DataGridView1.Columns("ID").Visible = False
+        DataGridView1.Columns("paid").Visible = False
+        AddHandler DataGridView1.CellClick, AddressOf Cell_click_CellClick
+    End Sub
+
+
 End Class

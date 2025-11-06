@@ -19,7 +19,7 @@
         'PreviousPanel = DashboardPanel
     End Sub
 
-    Private Sub HandleButtonFocused(sender As Object, e As EventArgs) Handles Btn_Employees.Click, Btn_Dashboard.Click, Btn_Payroll.Click, Btn_Logout.Click, btnViewPayroll.Click
+    Private Sub HandleButtonFocused(sender As Object, e As EventArgs) Handles Btn_Reports.Click, Btn_Employees.Click, Btn_Dashboard.Click, Btn_Payroll.Click, Btn_Logout.Click, btnViewPayroll.Click
         PreviousButton = FocusedButton
         FocusedButton = CType(sender, Button)
 

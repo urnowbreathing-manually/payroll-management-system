@@ -94,6 +94,7 @@ Public Class DBHandler
                     conditions.Add("(Name LIKE @filter OR Employee_ID LIKE @filter)")
                     cmd.Parameters.AddWithValue("@filter", "%" & filterStr & "%")
                 Else
+                    'MsgBox(filterStr & "     " & filterField)
                     conditions.Add(filterField & " = @filterstr")
                     cmd.Parameters.AddWithValue("@filterstr", filterStr)
                 End If
@@ -382,7 +383,7 @@ Public Class DBHandler
 
 
     'for employee list form
-    Public Function AddNewEmployee(Employee_ID As Integer,
+    Public Function AddNewEmployee(Employee_ID As String,
                                    Name As String,
                                    Department As String,
                                    EmailAddress As String,
@@ -506,7 +507,46 @@ Public Class DBHandler
             Return False
         End Try
     End Function
+    Public Function MoveEmployeeToActive(Employee_ID As String) As Boolean
+        Dim insertQuery As String = "INSERT INTO employee_list (Employee_ID, Name, Department, EmailAddress, BirthDate, ContactNo, Salary, HireDate) " &
+                                    "SELECT Employee_ID, Name, Department, EmailAddress, BirthDate, ContactNo, Salary, HireDate " &
+                                    "FROM employee_archive WHERE Employee_ID = @Employee_ID;"
 
+        Dim deleteQuery As String = "DELETE FROM employee_archive WHERE Employee_ID = @Employee_ID;"
+
+        Try
+            Using conn As New MySqlConnection(ConnectionString)
+                conn.Open()
+
+                Using transaction As MySqlTransaction = conn.BeginTransaction()
+                    Using insertCmd As New MySqlCommand(insertQuery, conn, transaction)
+                        insertCmd.Parameters.AddWithValue("@Employee_ID", Employee_ID)
+                        Dim insertedRows As Integer = insertCmd.ExecuteNonQuery()
+
+                        If insertedRows = 0 Then
+                            transaction.Rollback()
+                            Return False
+                        End If
+                    End Using
+
+                    Using deleteCmd As New MySqlCommand(deleteQuery, conn, transaction)
+                        deleteCmd.Parameters.AddWithValue("@Employee_ID", Employee_ID)
+                        deleteCmd.ExecuteNonQuery()
+                    End Using
+
+                    transaction.Commit()
+                    Return True
+                End Using
+            End Using
+
+        Catch ex As MySqlException
+            MessageBox.Show("Database error: " & ex.Message)
+            Return False
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            Return False
+        End Try
+    End Function
     ' ======== denina part end (forms: generate payroll, view payroll record, employee list) ========
 
 
